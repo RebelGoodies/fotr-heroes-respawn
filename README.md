@@ -6,33 +6,34 @@ For those who love heroes!
 
 ### About
 
-- Most heroes respawn on a 10 week timer when "killed."
-- This can be disabled mid campaign via the `GameConstants.xml`
-- All the default special respawns remain unchanged.
+- Most heroes respawn on a 10 cycle timer when "killed."
+- This can be disabled mid campaign via the `GameConstants.xml` file.
+- All the default special respawns remain unchanged (Grievous, Trench, Durge).
+- Special structures that generate minor commanders will do so in about half the time from before (fastest is 5 cycles).
 
 ### Exceptions to Respawn
 
-- **Bounty Hunter Durge** instantly respawns like normal and will permanently die if killed too many times.
-However, he usually has around 5+ lives anyway.
-- **Lucrehulk CIS heroes:** Pors Tonith and Mar Tuuk will never respawn because they are too powerful.
+- When a CIS mercenary dies, another bounty hunter can be hired instead.
+- **Lucrehulk heroes** Pors Tonith and Mar Tuuk will never respawn because they are too powerful.
 
-### Recruitable Heroes
+### Republic Recruitable Heroes
 
-Republic Recruitable Moff/Sector/Admiral heroes now get added back to the list on their death so that you can recruit them again if you wish.
-Also increased max allowed (more vacant slots that you need to purchase first).
-
-### How to Edit GameConstants
-
-1. How to disable or edit the time for a respawn:
-2. Navigate to `Data/XML`
-3. Open `GameConstants.xml`
-4. Find the line (417): `<Default_Hero_Respawn_Time>400.0</Default_Hero_Respawn_Time>`
-   - You can set it to a negative number to deactivate it in the late game.
+- Increased the max allowed for each category (more vacant slots to purchase first).
+- When one of these heroes are defeated, their slot is effectively suspended until they respawn.
 
 ### One Planet Start
 
-Heroes now spawn at the beginning of FTGU single planet start games.
-Grievous and Trench spawn after 15 and 30 weeks respectfully.
+- Heroes spawn at the beginning of FTGU single planet start games, matching the era selected.
+- Enabled Republic command staff. Clones disabled in era 1.
+
+### How to Edit GameConstants
+
+To disable or edit the time for a respawn:
+
+1. Go to `Data/XML`
+2. Open `GameConstants.xml`
+3. Find line (418): `<Default_Hero_Respawn_Time>400</Default_Hero_Respawn_Time>`
+  - You can set it to a negative number to deactivate it in between saved games.
 
 # License
 
