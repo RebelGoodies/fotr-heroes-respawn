@@ -1,31 +1,38 @@
 **Disclaimer**: This project is not affiliated with the EaWX team.
 
-# template-eawx-submod
+# FotR Heroes Respawn
 
-Template repository for any EaWX submod.
+For those who love heroes!
 
-## Setup Upstream
+### About
 
-**Create vendor branch**
-```
-git checkout --orphan vendor-eawx
-rm -r .
-mkdir -p mod
-```
+- Most heroes respawn on a 10 week timer when "killed."
+- This can be disabled mid campaign via the `GameConstants.xml`
+- All the default special respawns remain unchanged.
 
-**Import and merge upstream files**
-```
-git add mod
-git commit -m "Import EaWX mod upstream files"
-git checkout main
-git merge vendor-eawx --allow-unrelated-histories
-```
+### Exceptions to Respawn
 
-## EaWX Mods
+- **Bounty Hunter Durge** instantly respawns like normal and will permanently die if killed too many times.
+However, he usually has around 5+ lives anyway.
+- **Lucrehulk CIS heroes:** Pors Tonith and Mar Tuuk will never respawn because they are too powerful.
 
-- Thrawn's Revenge (TR)
-- Fall of the Republic (FotR)
-- Revan's Revenge (RR)
+### Recruitable Heroes
+
+Republic Recruitable Moff/Sector/Admiral heroes now get added back to the list on their death so that you can recruit them again if you wish.
+Also increased max allowed (more vacant slots that you need to purchase first).
+
+### How to Edit GameConstants
+
+1. How to disable or edit the time for a respawn:
+2. Navigate to `Data/XML`
+3. Open `GameConstants.xml`
+4. Find the line (417): `<Default_Hero_Respawn_Time>400.0</Default_Hero_Respawn_Time>`
+   - You can set it to a negative number to deactivate it in the late game.
+
+### One Planet Start
+
+Heroes now spawn at the beginning of FTGU single planet start games.
+Grievous and Trench spawn after 15 and 30 weeks respectfully.
 
 # License
 
