@@ -1,100 +1,9 @@
 <?xml version="1.0" ?>
 
-
-
 <Story>
 
-	<Event Name="Test_Integration">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>40</Event_Param1>
-
-		<Prereq>Government_Start</Prereq>
-
-	</Event>
-
-	<Event Name="MissionLoaded">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>MISSION_FIRED</Event_Param2>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_YOU_GOTAMISSION</Reward_Param1>
-		<Reward_Param2>20</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9></Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Perpetual>true</Perpetual>
-	</Event>
-
-
-	<Event Name="Buy_LoveMeRepublic">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>LoveMeRepublic</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>LoveMeRepublic</Event_Param3>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>LoveMeRepublic</Reward_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Exit_Function">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Prereq>Buy_LoveMeRepublic</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-
-	<Event Name="Disable_human">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Human</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-	</Event>
-	
-	<Event Name="Determine_Player">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>ACTIVE_PLAYER</Event_Param2>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>Human</Reward_Param1>
-		<Reward_Param2>0</Reward_Param2>
-	</Event>
-	
-	<Event Name="Government_Start">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-	</Event>
-	
-	<Event Name="Republic_Enter_Tech_01">
-		<Event_Type>STORY_TECH_LEVEL</Event_Type>
-		<Event_Param1>1</Event_Param1>
-	</Event>
-
-	<Event Name="Republic_Enter_Tech_02">
-		<Event_Type>STORY_TECH_LEVEL</Event_Type>
-		<Event_Param1>2</Event_Param1>
-	</Event>
-	
-	<Event Name="Republic_Enter_Tech_03">
-		<Event_Type>STORY_TECH_LEVEL</Event_Type>
-		<Event_Param1>3</Event_Param1>
-	</Event>
-	
-		<Event Name="Republic_Enter_Tech_04">
-		<Event_Type>STORY_TECH_LEVEL</Event_Type>
-		<Event_Param1>4</Event_Param1>
-	</Event>
-	
-	<Event Name="Republic_Enter_Tech_05">
-		<Event_Type>STORY_TECH_LEVEL</Event_Type>
-		<Event_Param1>5</Event_Param1>
-	</Event>
-	
 	<!--- Sector Force Events -->
-	
+
 	<Event Name="Sector_Forces_Integrated">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>SECTOR_FORCE_ABSORBED_SPEECH</Event_Param2>
@@ -111,11 +20,81 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Branch>Human</Branch>
 	</Event>
-	
-<!--******************************************************-->
-<!--***********	  Pick a Side             *****************-->
-<!--*******************************************************-->
-	
+
+	<!--*******************************************************-->
+	<!--********** Pick a Side: Military Enhancement **********-->
+	<!--*******************************************************-->
+
+	<Event Name="Sector_Governance_Decree_Appeal">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MILITARY_BILL_APPEAL</Event_Param2>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_GOVERNMENT_REPUBLIC_SECTOR_GOVERNANCE_DECREE_SPEECH_01</Reward_Param1>
+		<Reward_Param2>20</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Pestage_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Branch>Human</Branch>
+	</Event>
+
+	<Event Name="Reduced_Military_Bill_Appeal">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>25</Event_Param1>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_STORY_GOVERNMENT_REPUBLIC_REDUCED_MILITARY_BILL_SPEECH_01</Reward_Param1>
+		<Reward_Param2>20</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8></Reward_Param8>
+		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Sector_Governance_Decree_Appeal</Prereq>
+		<Branch>Human</Branch>
+	</Event>
+
+	<Event Name="Mission_Republic_Finances_Dialog">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>20</Event_Param1>
+		<Story_Dialog>Dialog_Government_Masterfile_Rep</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Tag>Military_Bill_Tag</Story_Tag>
+		<Prereq>Reduced_Military_Bill_Appeal</Prereq>
+		<Branch>Human</Branch>
+	</Event>
+
+	<Event Name="Unlock_Reduced_Military_Bill">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Support_Reduced_Military_Bill</Reward_Param1>
+		<Prereq>Mission_Republic_Finances_Dialog</Prereq>
+	</Event>
+
+	<Event Name="Unlock_Sector_Governance_Decree">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Support_Sector_Governance_Decree</Reward_Param1>
+		<Prereq>Mission_Republic_Finances_Dialog</Prereq>
+	</Event>
+
+	<Event Name="Mission_Republic_Finances_Completed">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MILITARY_BILL_DONE</Event_Param2>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Military_Bill_Tag</Reward_Param1>
+	</Event>
+
+	<!--*******************************************************-->
+	<!--************** Pick a Side: Order 65/66 ***************-->
+	<!--*******************************************************-->
+
 	<Event Name="Mothma_Appeal">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>LEADER_APPEAL</Event_Param2>
@@ -132,7 +111,7 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Branch>Human</Branch>
 	</Event>
-	
+
 	<Event Name="Palpatine_Appeal">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>25</Event_Param1>
@@ -150,120 +129,61 @@
 		<Prereq>Mothma_Appeal</Prereq>
 		<Branch>Human</Branch>
 	</Event>
-	
-	<Event Name="Unlock_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Support_Palpatine</Reward_Param1>
-		<Prereq>Future_Of_The_Republic_Dialog</Prereq>
-	</Event>
-	
-	<Event Name="Unlock_Mothma">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Support_Mothma</Reward_Param1>
-		<Prereq>Future_Of_The_Republic_Dialog</Prereq>
-	</Event>
-	
-	<Event Name="Future_Of_The_Republic_Dialog">
+
+	<Event Name="Future_of_The_Republic_Dialog">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>20</Event_Param1>
-		<Story_Dialog>Dialog_Republic_SupportALeader</Story_Dialog>
-		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog>Dialog_Government_Masterfile_Rep</Story_Dialog>
+		<Story_Chapter>2</Story_Chapter>
 		<Story_Tag>Leader_Tag</Story_Tag>
 		<Prereq>Palpatine_Appeal</Prereq>
 		<Branch>Human</Branch>
 	</Event>
-	
-	<Event Name="Future_Of_The_Republic_Completed">
+
+	<Event Name="Unlock_Palpatine">
 		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Support_Palpatine</Reward_Param1>
+		<Prereq>Future_of_The_Republic_Dialog</Prereq>
+	</Event>
+
+	<Event Name="Unlock_Mothma">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Support_Mothma</Reward_Param1>
+		<Prereq>Future_of_The_Republic_Dialog</Prereq>
+	</Event>
+
+	<Event Name="Future_of_The_Republic_Completed">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>LEADER_APPEAL_DONE</Event_Param2>
 		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
 		<Reward_Param1>Leader_Tag</Reward_Param1>
-		<Prereq>Support_Palpatine</Prereq>
-		<Prereq>Support_Mothma</Prereq>
 	</Event>
-	
-	<Event Name="Support_Palpatine">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>Support_Palpatine</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>Empire</Event_Param3>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>Support_Palpatine</Reward_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Lock_Palpatine">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Support_Palpatine</Reward_Param1>
-		<Prereq>Support_Mothma</Prereq>
-		<Prereq>Support_Palpatine</Prereq>
-	</Event>	
-	
-	<Event Name="Lock_Mothma">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Support_Mothma</Reward_Param1>
-		<Prereq>Support_Mothma</Prereq>
-		<Prereq>Support_Palpatine</Prereq>
-	</Event>
-	
-	<!-- ****************************************** Order 66 ******************************************** -->
-	<!-- ****************************************** Order 66 ******************************************** -->
-	<!-- ****************************************** Order 66 ******************************************** -->
-	
-	<Event Name="Support_AI">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>LEADER_APPEAL_AI</Event_Param2>
-	</Event>
-	
-	<Event Name="Palpatine_Thanks">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>20</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_GOVERNMENT_REPUBLIC_PALPATINE_THANKS</Reward_Param1>
-		<Reward_Param2>20</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>PalpatineFotR_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Support_Palpatine</Prereq>
-		<Branch>Human</Branch>
-	</Event>
-	
+
+	<!--*******************************************************-->
+	<!--********************** Order 66 ***********************-->
+	<!--*******************************************************-->
+
 	<Event Name="Lira_Contract">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>200</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_GOVERNMENT_REPUBLIC_LIRA_BLISSEX</Reward_Param1>
-		<Reward_Param2>20</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Lira_Blissex_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Palpatine_Thanks</Prereq>
-		<Branch>Human</Branch>
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>LIRA_CONTRACT</Event_Param2>
 	</Event>
-	
+
+	<Event Name="Lira_Contract_AI">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>LIRA_CONTRACT_AI</Event_Param2>
+	</Event>
+
 	<Event Name="KDY_Patron_Dialog">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>20</Event_Param1>
-		<Story_Dialog>Dialog_Republic_KDYContract</Story_Dialog>
-		<Story_Chapter>0</Story_Chapter>
+		<Event_Param1>10</Event_Param1>
+		<Story_Dialog>Dialog_Government_Masterfile_Rep</Story_Dialog>
+		<Story_Chapter>3</Story_Chapter>
 		<Story_Tag>Kuat_Tag</Story_Tag>
 		<Prereq>Lira_Contract</Prereq>
-		<Branch>Human</Branch>
 	</Event>
-	
+
 	<Event Name="KDY_Patron_Completed">
 		<Event_Type>STORY_CONSTRUCT</Event_Type>
 		<Event_Param1>DUMMY_KUAT_CONTRACT</Event_Param1>
@@ -273,8 +193,8 @@
 		<Reward_Param1>Kuat_Tag</Reward_Param1>
 		<Branch>Human</Branch>
 	</Event>
-	
-	
+
+
 	<!--<Event Name="KDY_Patron_Dialog_Ended">
 		<Event_Type>STORY_CONQUER</Event_Type>
 		<Event_Param1>Kuat</Event_Param1>
@@ -285,20 +205,14 @@
 		<Prereq>Build_KDY_Contract</Prereq>
 		<Branch>Human</Branch>
 	</Event>-->
-		
+
 	<Event Name="Unlock_KDY">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
 		<Reward_Param1>DUMMY_KUAT_CONTRACT</Reward_Param1>
 		<Prereq>Lira_Contract</Prereq>	
 	</Event>
-		
-	<Event Name="KDY_Deal_AI">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>200</Event_Param1>
-		<Prereq>Support_AI</Prereq>
-	</Event>
-	
+
 	<Event Name="Unlock_Order66">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
@@ -306,32 +220,12 @@
 		<Prereq>KDY_Patron_Completed</Prereq>	
 		<Branch>Human</Branch>
 	</Event>
-	
-	<Event Name="Order66_Executed">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>Execute_Order_66_Dummy</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>Empire</Event_Param3>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>Execute_Order_66_Dummy</Reward_Param1>
-		<Perpetual>true</Perpetual>
-		<Branch>Human</Branch>
-	</Event>
-	
-		
+
 	<Event Name="Trigger_Order66">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>200</Event_Param1>
-		<Prereq>KDY_Patron_Completed</Prereq>
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ORDER_66_HUMAN</Event_Param2>
 	</Event>
-	
-	<Event Name="Lock_Order66">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Execute_Order_66_Dummy</Reward_Param1>
-		<Prereq>Convo_Order66_1</Prereq>
-	</Event>
-		
+
 	<Event Name="Convo_Order66_1">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>MULTIMEDIA</Reward_Type>
@@ -461,23 +355,6 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Convo_Order66_7</Prereq>
 	</Event>
-	
-	<Event Name="Order66_Destroy_Kit">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Kit_Fisto_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_8</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Kit2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Kit_Fisto_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_8</Prereq>
-	</Event>
-		
 	<Event Name="Convo_Order66_9">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3</Event_Param1>
@@ -542,23 +419,7 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Convo_Order66_11</Prereq>
 	</Event>
-	
-	<Event Name="Order66_Destroy_Mace">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Mace_Windu_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_12</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Mace2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Mace_Windu_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_12</Prereq>
-	</Event>
-	
+
 	<Event Name="Convo_Order66_13">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>3</Event_Param1>
@@ -623,251 +484,11 @@
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Convo_Order66_15</Prereq>
 	</Event>
-	
-	<Event Name="Order66_Destroy_Yoda">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Yoda_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Yoda2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Yoda_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_ObiWan">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Obi_Wan_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_ObiWan2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Obi_Wan_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_ShaakTi">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Shaak_Ti_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_ShaakTi2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Shaak_Ti_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Aayla">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Aayla_Secura_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Aayla2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Aayla_Secura_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Plo">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Plo_Koon_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Ahsoka">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Ahsoka_Delta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Order66_Destroy_Ahsoka2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Ahsoka_Eta_Team</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
+
 	<Event Name="Remove_Jedi_Temple">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Jedi_Temple</Reward_Param1>
 		<Prereq>Convo_Order66_16</Prereq>
 	</Event>
-	
-	<Event Name="Lock_Jedi_Temple">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>LOCK_UNIT</Reward_Type>
-		<Reward_Param1>Jedi_Temple</Reward_Param1>
-		<Prereq>Convo_Order66_16</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Palpatine">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Emperor_Palpatine_Team</Reward_Param1>
-		<Reward_Param2>Coruscant</Reward_Param2>
-		<Prereq>Order66_Destroy_Plo</Prereq>
-	</Event>
-
-	<Event Name="Spawn_Mulleen">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Mulleen_Imperator</Reward_Param1>
-		<Reward_Param2>Coruscant</Reward_Param2>
-		<Prereq>Order66_Destroy_Plo</Prereq>
-	</Event>
-
-	<Event Name="Unlock_Executrix">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Tarkin_Executrix_Upgrade</Reward_Param1>
-		<Prereq>Order66_Destroy_Plo</Prereq>
-	</Event>
-	
-	<Event Name="Mustafar_Destroy_Anakin1">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Anakin_Delta_Team</Reward_Param1>
-		<Prereq>Spawn_Palpatine</Prereq>
-	</Event>
-	
-	<Event Name="Mustafar_Destroy_Anakin2">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Anakin_Eta_Team</Reward_Param1>
-		<Prereq>Spawn_Palpatine</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Vader">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Vader_Team</Reward_Param1>
-		<Reward_Param2>Coruscant</Reward_Param2>
-		<Branch>VaderAppears</Branch>
-		<Prereq>Mustafar_Destroy_Anakin1</Prereq>
-		<Prereq>Mustafar_Destroy_Anakin2</Prereq>
-	</Event>
-	
-	<!-- ****************************************** Delegation of 2000 ******************************************** -->
-	<!-- ****************************************** Delegation of 2000 ******************************************** -->
-	<!-- ****************************************** Delegation of 2000 ******************************************** -->
-	
-	<Event Name="Support_Mothma">
-		<Event_Type>STORY_CONSTRUCT</Event_Type>
-		<Event_Param1>Support_Mothma</Event_Param1>
-		<Event_Param2>1</Event_Param2>
-		<Event_Param3>Empire</Event_Param3>
-		<Reward_Type>DESTROY_OBJECT</Reward_Type>
-		<Reward_Param1>Support_Mothma</Reward_Param1>
-		<Perpetual>true</Perpetual>
-	</Event>	
-	
-	<Event Name="Mothma_Thanks">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>20</Event_Param1>
-		<Reward_Type>MULTIMEDIA</Reward_Type>
-		<Reward_Param1>TEXT_STORY_GOVERNMENT_REPUBLIC_MOTHMA_THANKS</Reward_Param1>
-		<Reward_Param2>20</Reward_Param2>
-		<Reward_Param3 />
-		<Reward_Param4 />
-		<Reward_Param5 />
-		<Reward_Param6 />
-		<Reward_Param7 />
-		<Reward_Param8></Reward_Param8>
-		<Reward_Param9>Mon_Mothma_Loop</Reward_Param9>
-		<Reward_Param10>0</Reward_Param10>
-		<Prereq>Support_Mothma</Prereq>
-		<Branch>Human</Branch>
-	</Event>
-	
-	<Event Name="Destroy_Pestage">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Pestage_Team</Reward_Param1>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Mon_Mothma">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Mon_Mothma_Team</Reward_Param1>
-		<Reward_Param2>Alderaan</Reward_Param2>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Garm_Bel_Iblis">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Garm_Team</Reward_Param1>
-		<Reward_Param2>Corellia</Reward_Param2>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Bail_Organa">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Bail_Team</Reward_Param1>
-		<Reward_Param2>Alderaan</Reward_Param2>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-
-	<Event Name="Spawn_Raymus_Antilles">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Raymus_Tantive</Reward_Param1>
-		<Reward_Param2>Alderaan</Reward_Param2>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-	
-	
-	<Event Name="Unlock_Battalion">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Tallon_Battalion_Upgrade</Reward_Param1>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-	
-	<Event Name="Unlock_Neutron">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1</Event_Param1>
-		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
-		<Reward_Param1>Neutron_Star</Reward_Param1>
-		<Prereq>Mothma_Thanks</Prereq>
-	</Event>
-
 </Story>
