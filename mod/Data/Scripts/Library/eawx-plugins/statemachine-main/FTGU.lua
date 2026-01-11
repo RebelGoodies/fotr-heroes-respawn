@@ -9,6 +9,7 @@ return function(dsl)
     local era_two = DeepCoreState(require("eawx-states/fotr-ftgu-era-two"))
     local era_three = DeepCoreState(require("eawx-states/fotr-ftgu-era-three"))
     local era_four = DeepCoreState(require("eawx-states/fotr-ftgu-era-four"))
+    local era_five = DeepCoreState(require("eawx-states/fotr-ftgu-era-five"))
 
     dsl.transition(initialize)
         :to(setup)
@@ -28,6 +29,11 @@ return function(dsl)
     dsl.transition(setup)
         :to(era_four)
         :when(policy:global_era(4))
+        :end_()
+
+    dsl.transition(setup)
+        :to(era_five)
+        :when(policy:global_era(5))
         :end_()
         
     return initialize

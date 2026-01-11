@@ -27,9 +27,12 @@ StoryUtil = require("eawx-util/StoryUtil")
 require("deepcore/std/class")
 
 --Full list entry structure
---["Tag"] = {"Assign_unit",{"Retire1","Retire2"},{"Unit1","Unit2"},"Hero text ID", ["no_random"] = true, {"Company1","Company2"}, ["Companies"] = {"Company1","Company2"}}
+--["Tag"] = {"Assign_unit",{"Retire1","Retire2"},{"Unit1","Unit2"},"Hero text ID", ["no_random"] = true, ["Companies"] = {"Company1","Company2"}, ["required_unit"] = "Unit", ["required_team"] = "team", ["Units"] = {{"Team1Unit1","Team1Unit2"},{"Team2Unit1","Team2Unit2"}}}
 --no_random is optional and prevents the entry from being bought with the random entry
---Companies is optional and appears on ground units/squadrons
+--Companies is optional and appears on ground units/squadrons within the system
+--required_unit is optional and holds the object to despawn when the system hero is spawned (e.g. the Millenium Falcon for Mon Remonda)
+--required_team is optional and holds the object to spawn when the system hero is edspawned (e.g. Han Team for Mon Remonda)
+--Units is optional and holds multiple heroes within the team. Put the teams in the Unit1,Unit2... slots in this case
 
 function init_hero_system(hero_data)
 	hero_data.free_hero_slots = hero_data.free_hero_slots - Get_Active_Heroes(true, hero_data)
@@ -67,7 +70,7 @@ function Lock_Hero_Options(hero_data)
 end
 
 function Unlock_Hero_Options(hero_data)
-	if hero_data.initialized then
+	if hero_data.initialized and not hero_data.disabled then
 		local random_count = 0
 		if hero_data.free_hero_slots > 0 then
 			for index, adm in pairs(hero_data.available_list) do
@@ -83,7 +86,7 @@ function Unlock_Hero_Options(hero_data)
 				hero_data.active_player.Unlock_Tech(assign_unit)
 			end
 		end
-		if hero_data.vacant_hero_slots > 0 then
+		if hero_data.vacant_hero_slots > 0 and hero_data.vacant_limit > 0 then
 			local assign_unit = Find_Object_Type(hero_data.extra_name)
 			hero_data.active_player.Unlock_Tech(assign_unit)
 		end
@@ -99,6 +102,15 @@ function Get_Active_Heroes(init, hero_data)
 		end
 		for index2, ship in pairs(entry[3]) do
 			local find_it = Find_First_Object(ship)
+			if entry.Units then
+				for units_id=1,table.getn(entry.Units[index2]) do
+					check_hero = Find_First_Object(entry.Units[index2][units_id])
+					if TestValid(check_hero) then
+						find_it = check_hero
+						break
+					end
+				end
+			end
 			if TestValid(find_it) then
 				if find_it.Get_Owner() == hero_data.active_player then
 					admiral_count = admiral_count + 1
@@ -154,10 +166,23 @@ function Handle_Hero_Despawn(hero_tag, hero_data)
 			planet = check_hero.Get_Planet_Location()
 			check_hero.Despawn()
 		end
-		check_hero = Find_First_Object(hero_unit)
-		if TestValid(check_hero) then
+		local bypassflag = false
+		if hero_entry.Units then
+			for units_id=1,table.getn(hero_entry.Units[flaship_id]) do
+				check_hero = Find_First_Object(hero_entry.Units[flaship_id][units_id])
+				if TestValid(check_hero) then
+					check_hero.Despawn()
+					bypassflag = true
+				end
+			end
+		else
+			check_hero = Find_First_Object(hero_unit)
+		end
+		if TestValid(check_hero) or bypassflag then
 			hero_data.full_list[hero_tag].unit_id = flaship_id
-			check_hero.Despawn()
+			if not hero_entry.Units then
+				check_hero.Despawn()
+			end
 			if hero_entry.required_team then
 				if not TestValid(planet) then
 					planet = StoryUtil.FindFriendlyPlanet(hero_data.active_player)
@@ -227,13 +252,32 @@ end
 function Handle_Hero_Killed(killed_object, owner, hero_data)
 	if Find_Player(owner) == hero_data.active_player then
 		for index, entry in pairs(hero_data.full_list) do
-			for _, variant in pairs(entry[3]) do
+			for j, variant in pairs(entry[3]) do
+				local killing = false
 				if variant == killed_object then
+					killing = true
+				end
+				if entry.Companies then
+					if entry.Companies[j] == killed_object then
+						killing = true
+					end
+				end
+				if killing then
 					if hero_data.total_slots > 0 then
 						if hero_data.active_player.Is_Human() then
 							hero_data.vacant_hero_slots = hero_data.vacant_hero_slots + 1
-							local assign_unit = Find_Object_Type(hero_data.extra_name)
-							hero_data.active_player.Unlock_Tech(assign_unit)
+							if hero_data.vacant_limit > 0 then
+								local assign_unit = Find_Object_Type(hero_data.extra_name)
+								hero_data.active_player.Unlock_Tech(assign_unit)
+								StoryUtil.ShowScreenText("Be more careful with our heroes, Commander. We can only replace " .. hero_data.vacant_limit .. " more such loss(es)", 5, nil, {r = 244, g = 244, b = 0})
+							else
+								if hero_data.vacant_hero_slots >= hero_data.total_slots then
+									StoryUtil.ShowScreenText("Your have spent enough lives of our heroes, Commander. There will be no more for you to spend", 5, nil, {r = 244, g = 244, b = 0})
+								else
+									StoryUtil.ShowScreenText("We can no longer sustain these losses among our leadership, Commander. No more command positions will be opened if you lose what remains.", 5, nil, {r = 244, g = 244, b = 0})
+								end
+							end
+							hero_data.vacant_limit = hero_data.vacant_limit - 1
 							local text_list = GlobalValue.Get(hero_data.global_display_list)
 							for i, text in pairs(text_list) do
 								if text == entry[4] then
@@ -276,14 +320,22 @@ function Handle_New_Hero_Slot(hero_data)
 	if TestValid(new_slot) then
 		new_slot.Despawn()
 	end
-	hero_data.vacant_hero_slots = hero_data.vacant_hero_slots - 1
-	hero_data.free_hero_slots = hero_data.free_hero_slots + 1
-	Unlock_Hero_Options(hero_data)
-	if hero_data.vacant_hero_slots == 0 then
+	if hero_data.vacant_limit >= 0 then
+		if hero_data.active_player.Is_Human() then
+			StoryUtil.ShowScreenText(hero_data.vacant_limit .. " more hero replacement(s) remain", 5, nil, {r = 244, g = 244, b = 0})
+		end
+		hero_data.vacant_hero_slots = hero_data.vacant_hero_slots - 1
+		hero_data.free_hero_slots = hero_data.free_hero_slots + 1
+		Unlock_Hero_Options(hero_data)
+		if hero_data.vacant_hero_slots == 0 then
+			local assign_unit = Find_Object_Type(hero_data.extra_name)
+			hero_data.active_player.Lock_Tech(assign_unit)
+		end
+		Get_Active_Heroes(false,hero_data)
+	else
 		local assign_unit = Find_Object_Type(hero_data.extra_name)
 		hero_data.active_player.Lock_Tech(assign_unit)
 	end
-	Get_Active_Heroes(false,hero_data)
 end
 
 --Handle the permanent removal of an option for story purposes
@@ -383,4 +435,14 @@ function check_hero_exists(hero_tag, hero_data)
 		end
 	end
 	return false
+end
+
+function Disable_Hero_Options(hero_data)
+	hero_data.disabled = true
+	Lock_Hero_Options(hero_data)
+end
+
+function Enable_Hero_Options(hero_data)
+	hero_data.disabled = false
+	Unlock_Hero_Options(hero_data)
 end
