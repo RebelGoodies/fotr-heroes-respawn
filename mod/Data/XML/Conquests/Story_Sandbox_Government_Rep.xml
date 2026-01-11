@@ -751,23 +751,12 @@
 		<Prereq>Order66_Destroy_Plo</Prereq>
 	</Event>
 	
-	<Event Name="Anakin_Dead">
-		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Anakin</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Reward_Type>DISABLE_BRANCH</Reward_Type>
-		<Reward_Param1>VaderAppears</Reward_Param1>
-		<Reward_Param2>1</Reward_Param2>
-		<Prereq>Government_Start</Prereq>
-	</Event>
-	
-	<Event Name="Mustafar_Destroy_Anakin">
+	<Event Name="Mustafar_Destroy_Anakin1">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>1</Event_Param1>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Anakin_Delta_Team</Reward_Param1>
-		<Prereq>Spawn_Vader</Prereq>
+		<Prereq>Spawn_Palpatine</Prereq>
 	</Event>
 	
 	<Event Name="Mustafar_Destroy_Anakin2">
@@ -775,7 +764,7 @@
 		<Event_Param1>1</Event_Param1>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Anakin_Eta_Team</Reward_Param1>
-		<Prereq>Spawn_Vader</Prereq>
+		<Prereq>Spawn_Palpatine</Prereq>
 	</Event>
 	
 	<Event Name="Spawn_Vader">
@@ -785,7 +774,8 @@
 		<Reward_Param1>Vader_Team</Reward_Param1>
 		<Reward_Param2>Coruscant</Reward_Param2>
 		<Branch>VaderAppears</Branch>
-		<Prereq>Spawn_Palpatine</Prereq>
+		<Prereq>Mustafar_Destroy_Anakin1</Prereq>
+		<Prereq>Mustafar_Destroy_Anakin2</Prereq>
 	</Event>
 	
 	<!-- ****************************************** Delegation of 2000 ******************************************** -->

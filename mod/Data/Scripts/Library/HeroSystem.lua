@@ -247,6 +247,7 @@ function Handle_Hero_Killed(killed_object, owner, hero_data)
 							hero_data.free_hero_slots = hero_data.free_hero_slots + 1
 							Unlock_Hero_Options(hero_data)
 						end
+						Handle_Hero_Add(index, hero_data) -- Add back to list
 						return index
 					end
 				end

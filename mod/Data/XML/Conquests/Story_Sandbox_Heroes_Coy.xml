@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+
+
+
+<Story>
+	
+
+	<Event Name="GC_Progress_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+<!--	<Event Name="Backup_Unlock_Coy">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Victory2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Empire</Event_Param3>
+	</Event>
+	
+	
+	<Event Name="Spawn_Coy">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>3</Event_Param1>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Coy_Imperator</Reward_Param1>
+		<Reward_Param2>Kuat</Reward_Param2>
+		<Prereq>GC_Progress_04</Prereq>
+		<Prereq>Backup_Unlock_Coy</Prereq>
+	</Event> -->
+
+	
+</Story>

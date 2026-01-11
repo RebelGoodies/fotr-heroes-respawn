@@ -47,9 +47,9 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player)
 	crossplot:subscribe("REPUBLIC_MOFF_LOCKIN", self.moff_lockin, self)
 	
 	admiral_data = {
-		total_slots = 3,			--Max slot number. Set at the start of the GC and never change
+		total_slots = 6,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 3,		--Slots open to buy
-		vacant_hero_slots = 0,	--Slots that need another action to move to free
+		vacant_hero_slots = 3,	--Slots that need another action to move to free
 		initialized = false,
 		full_list = { --All options for reference operations
 			["Yularen"] = {"YULAREN_ASSIGN",{"YULAREN_RETIRE","YULAREN_RETIRE2"},{"YULAREN_RESOLUTE","YULAREN_INTEGRITY"},"TEXT_HERO_YULAREN"},
@@ -84,9 +84,9 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player)
 	}
 	
 	moff_data = {
-		total_slots = 1,			--Max slot number. Set at the start of the GC and never change
+		total_slots = 2,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 1,		--Slots open to buy
-		vacant_hero_slots = 0,	--Slots that need another action to move to free
+		vacant_hero_slots = 1,	--Slots that need another action to move to free
 		initialized = false,
 		full_list = { --All options for reference operations
 			["Tarkin"] = {"TARKIN_ASSIGN",{"TARKIN_RETIRE","TARKIN_RETIRE2"},{"TARKIN_VENATOR","TARKIN_EXECUTRIX"},"TEXT_HERO_TARKIN"},
@@ -103,7 +103,7 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player)
 		available_list = {--Heroes currently available for purchase. Seeded with those who have no special prereqs
 			"Hauser",
 			"Wessel",
-			"Seerdon",			
+			"Seerdon",
 			--"Coy",
 		},
 		story_locked_list = {},--Heroes not accessible, but able to return with the right conditions

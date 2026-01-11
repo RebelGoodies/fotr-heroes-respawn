@@ -1,21 +1,19 @@
+require("eawx-util/StoryUtil")
+require("eawx-util/UnitUtil")
+require("PGStoryMode")
+require("PGSpawnUnits")
+
 return {
     on_enter = function(self, state_context)
-        --Logger:trace("entering fotr-ftgu-era-four:on_enter")
+		--Logger:trace("entering fotr-ftgu-era-one:on_enter")
 
-        GlobalValue.Set("CURRENT_ERA", 4)
+        GlobalValue.Set("CURRENT_ERA", 1)
 
-		self.Active_Planets = StoryUtil.GetSafePlanetTable()
+        self.Active_Planets = StoryUtil.GetSafePlanetTable()
         self.entry_time = GetCurrentTime()
-
-        crossplot:publish("VENATOR_RESEARCH_FINISHED", "empty")
-        crossplot:publish("PHASE_TWO_RESEARCH_FINISHED", "empty")
-        crossplot:publish("BULWARK_RESEARCH_FINISHED", "empty")
-        crossplot:publish("VICTORY_RESEARCH_FINISHED", "empty")
-		crossplot:publish("VICTORY2_RESEARCH_FINISHED", "empty")
-		crossplot:publish("BULWARK2_RESEARCH_FINISHED", "empty")
 		
 		if self.entry_time <= 5 then
-            self.Starting_Spawns = require("eawx-mod-fotr/spawn-sets/FTGU_EraFourStartSet")
+            self.Starting_Spawns = require("eawx-mod-fotr/spawn-sets/FTGU_EraOneStartSet")
 			
             for faction, spawnlist in pairs(self.Starting_Spawns) do
                 local player = Find_Player(faction)
@@ -31,8 +29,7 @@ return {
 					end
                 end
             end
-		end
-		
+        end
     end,
     on_update = function(self, state_context)
     end,

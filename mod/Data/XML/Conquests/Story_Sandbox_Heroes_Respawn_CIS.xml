@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--************ Manage Hero Respawns for CIS ************-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	<!--Would be too overpowered for Lucrehulk Heroes to respawn-->
+	
+	<Event Name="Tuuk_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Tuuk_Procurer</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+	</Event>
+	
+	<Event Name="Remove_Tuuk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Tuuk_Procurer</Reward_Param1>
+		<Prereq>Tuuk_Dies</Prereq>
+	</Event>
+	
+	
+	<Event Name="Tonith_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Tonith_Corpulentus</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+	</Event>
+	
+	<Event Name="Remove_Tonith">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Tonith_Corpulentus</Reward_Param1>
+		<Prereq>Tonith_Dies</Prereq>
+	</Event>
+	
+	<!--******************** Remove Duplicates ********************-->
+	<!--******************** Remove Duplicates ********************-->
+	<!--******************** Remove Duplicates ********************-->	
+	
+	<Event Name="Durge_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Durge_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Durge">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Durge_Team</Reward_Param1>
+		<Prereq>Durge_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- ******************** Grievous Duplicates ******************** -->
+	<!-- ******************** Grievous Duplicates ******************** -->
+	<!-- ******************** Grievous Duplicates ******************** -->
+		
+	<Event Name="Recusant_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grievous_Team_Recusant</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Recusant">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grievous_Team_Recusant</Reward_Param1>
+		<Prereq>Recusant_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Invisible_Hand_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grievous_Team</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Invisible_Hand">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grievous_Team</Reward_Param1>
+		<Prereq>Invisible_Hand_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+
+	<Event Name="Malevolence_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grievous_Team_Malevolence</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Malevolence">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grievous_Team_Malevolence</Reward_Param1>
+		<Prereq>Malevolence_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+
+</Story>

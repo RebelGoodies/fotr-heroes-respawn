@@ -1,0 +1,611 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--********* Manage Hero Respawns for Repbublic *********-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	<!--******************** Clone Heroes ********************-->
+	<!--******************** Clone Heroes ********************-->
+	<!--******************** Clone Heroes ********************-->
+	
+	<!-- If clone heroes defeated, respawn for phase II upgrade -->
+	
+	<Event Name="Force_Respawn_Cody">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Clone_Trooper_II</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Empire</Event_Param3>
+		<Reward_Type>FORCE_RESPAWN</Reward_Type>
+		<Reward_Param1>Cody_Team</Reward_Param1>
+	</Event>
+	
+	<Event Name="Force_Respawn_Rex">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Clone_Trooper_II</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Empire</Event_Param3>
+		<Reward_Type>FORCE_RESPAWN</Reward_Type>
+		<Reward_Param1>Rex_Team</Reward_Param1>
+	</Event>
+	
+	<Event Name="Force_Respawn_Fordo">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Dummy_Research_Clone_Trooper_II</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>Empire</Event_Param3>
+		<Reward_Type>FORCE_RESPAWN</Reward_Type>
+		<Reward_Param1>Fordo_Team</Reward_Param1>
+	</Event>
+	
+	
+	<!-- *************************** Remove Moff/Sector Heores *********************** -->
+	<!-- *************************** Remove Moff/Sector Heores *********************** -->
+	<!-- *************************** Remove Moff/Sector Heores *********************** -->
+	
+	<!-- Moff/Sector Commander options - Always available -->
+	
+	<Event Name="Hauser_Dreadnaught_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Hauser_Dreadnaught</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Hauser_Dreadnaught">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Hauser_Dreadnaught</Reward_Param1>
+		<Prereq>Hauser_Dreadnaught_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Wessel_Acclamator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Wessel_Acclamator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Wessel_Acclamator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Wessel_Acclamator</Reward_Param1>
+		<Prereq>Wessel_Acclamator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Seerdon_Invincible_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Seerdon_Invincible</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Seerdon_Invincible">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Seerdon_Invincible</Reward_Param1>
+		<Prereq>Seerdon_Invincible_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- Venator heroes -->
+	
+	<Event Name="Tarkin_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Tarkin_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Tarkin_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Tarkin_Venator</Reward_Param1>
+		<Prereq>Tarkin_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- ISD version - Order 66 reward -->
+	
+	<Event Name="Tarkin_Executrix_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Tarkin_Executrix</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Tarkin_Executrix">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Tarkin_Executrix</Reward_Param1>
+		<Prereq>Tarkin_Executrix_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Wessex_Redoubt_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Wessex_Redoubt</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Wessex_Redoubt">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Wessex_Redoubt</Reward_Param1>
+		<Prereq>Wessex_Redoubt_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Grant_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grant_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Grant_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grant_Venator</Reward_Param1>
+		<Prereq>Grant_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Trachta_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Trachta_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Trachta_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Trachta_Venator</Reward_Param1>
+		<Prereq>Trachta_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Vorru_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Vorru_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Vorru_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Vorru_Venator</Reward_Param1>
+		<Prereq>Vorru_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- VSD heroes -->
+	
+	<Event Name="Praji_Valorum_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Praji_Valorum</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Praji_Valorum">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Praji_Valorum</Reward_Param1>
+		<Prereq>Praji_Valorum_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Ravik_Victory_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Ravik_Victory</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Ravik_Victory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Ravik_Victory</Reward_Param1>
+		<Prereq>Ravik_Victory_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<!-- *************************** Remove Admiral Heores *********************** -->
+	<!-- *************************** Remove Admiral Heores *********************** -->
+	<!-- *************************** Remove Admiral Heores *********************** -->
+	
+	<!-- Admiral options - Always available -->
+	
+	<Event Name="Dallin_Kebir_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Dallin_Kebir</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Dallin_Kebir">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Dallin_Kebir</Reward_Param1>
+		<Prereq>Dallin_Kebir_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Maarisa_Captor_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Maarisa_Captor</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Maarisa_Captor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Maarisa_Captor</Reward_Param1>
+		<Prereq>Maarisa_Captor_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- Venator version -->
+	
+	<Event Name="Maarisa_Retaliation_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Maarisa_Retaliation</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Maarisa_Retaliation">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Maarisa_Retaliation</Reward_Param1>
+		<Prereq>Maarisa_Retaliation_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Tallon_Sundiver_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Tallon_Sundiver</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Tallon_Sundiver">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Tallon_Sundiver</Reward_Param1>
+		<Prereq>Tallon_Sundiver_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- Praetor version - Order 65 reward -->
+	
+	<Event Name="Tallon_Battalion_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Tallon_Battalion</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Tallon_Battalion">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Tallon_Battalion</Reward_Param1>
+		<Prereq>Tallon_Battalion_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Pellaeon_Leveler_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Pellaeon_Leveler</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Pellaeon_Leveler">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Pellaeon_Leveler</Reward_Param1>
+		<Prereq>Pellaeon_Leveler_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Baraka_Nexu_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Baraka_Nexu</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Baraka_Nexu">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Baraka_Nexu</Reward_Param1>
+		<Prereq>Baraka_Nexu_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Martz_Prosecutor_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Martz_Prosecutor</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Martz_Prosecutor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Martz_Prosecutor</Reward_Param1>
+		<Prereq>Martz_Prosecutor_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Grumby_Invincible_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Grumby_Invincible</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Grumby_Invincible">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Grumby_Invincible</Reward_Param1>
+		<Prereq>Grumby_Invincible_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- Venator heroes -->
+	
+	<Event Name="Wieler_Resilient_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Wieler_Resilient</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Wieler_Resilient">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Wieler_Resilient</Reward_Param1>
+		<Prereq>Wieler_Resilient_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Coburn_Triumphant_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Coburn_Triumphant</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Coburn_Triumphant">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Coburn_Triumphant</Reward_Param1>
+		<Prereq>Coburn_Triumphant_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Yularen_Resolute_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Yularen_Resolute</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Yularen_Resolute">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Yularen_Resolute</Reward_Param1>
+		<Prereq>Yularen_Resolute_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- Era 4 upgrade -->
+	
+	<Event Name="Yularen_Integrity_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Yularen_Integrity</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Yularen_Integrity">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Yularen_Integrity</Reward_Param1>
+		<Prereq>Yularen_Integrity_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Kilian_Endurance_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Kilian_Endurance</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Kilian_Endurance">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Kilian_Endurance</Reward_Param1>
+		<Prereq>Kilian_Endurance_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Dao_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Dao_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Dao_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Dao_Venator</Reward_Param1>
+		<Prereq>Dao_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Denimoor_Tenacious_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Denimoor_Tenacious</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Denimoor_Tenacious">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Denimoor_Tenacious</Reward_Param1>
+		<Prereq>Denimoor_Tenacious_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Dron_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Dron_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Dron_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Dron_Venator</Reward_Param1>
+		<Prereq>Dron_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Autem_Venator_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Autem_Venator</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Autem_Venator">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Autem_Venator</Reward_Param1>
+		<Prereq>Autem_Venator_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Forral_Vensenor_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Forral_Vensenor</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Forral_Vensenor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Forral_Vensenor</Reward_Param1>
+		<Prereq>Forral_Vensenor_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- VSD heroes -->
+	
+	<Event Name="Screed_Arlionne_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Screed_Arlionne</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Screed_Arlionne">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Screed_Arlionne</Reward_Param1>
+		<Prereq>Screed_Arlionne_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Dodonna_Ardent_Dies">
+  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+  		<Event_Param1>Dodonna_Ardent</Event_Param1>
+		<Event_Param2></Event_Param2>
+		<Event_Param3>1</Event_Param3>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Dodonna_Ardent">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Dodonna_Ardent</Reward_Param1>
+		<Prereq>Dodonna_Ardent_Dies</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+
+</Story>
