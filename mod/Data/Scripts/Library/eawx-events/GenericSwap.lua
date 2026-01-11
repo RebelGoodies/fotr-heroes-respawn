@@ -1,7 +1,7 @@
 require("deepcore/std/class")
 require("PGSpawnUnits")
-StoryUtil = require("eawx-util/StoryUtil")
-UnitUtil = require("eawx-util/UnitUtil")
+require("eawx-util/StoryUtil")
+require("eawx-util/UnitUtil")
 
 ---@class GenericSwap
 GenericSwap = class()
