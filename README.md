@@ -7,34 +7,36 @@ For those who love heroes!
 ### About
 
 - Most heroes respawn on a 10 cycle timer when "killed."
-- This can be disabled mid campaign via the `GameConstants.xml` file.
+- This can be toggled on and off at any time through buttons in the advanced options tab (Human and AI can be toggled separately).
 - All the default special respawns remain unchanged (Grievous, Trench, Durge, Dooku, etc.).
-- Special structures that generate minor commanders will do so in about half the time from before (fastest is 5 cycles, slowest is 22).
 
 ### Republic Recruitable Heroes
 
 - When one of these heroes are defeated, their slot is effectively suspended until they respawn.
 - Added option to increase slots for all hero categories by one, which can be used as many times as needed.
-  Check the advanced options tab.
+  Check the *advanced options tab.*
 
 ### Exceptions to Respawn
 
-- **All Lucrehulk heroes:** Pors Tonith, Mar Tuuk, Merai Free, The Doctor, Vetlya, and Pirate Pundar.
-- Exceptions can be edited here: `Data/Scripts/Library/RespawnExceptions.lua`
+- **Mandator II:** Onara Kuat (Pride of the Core)
+- **Tagge Battlecruiser:** Sanya Tagge, Orman Tagge
+- **Lucrehulk:** Krett, Merai, Doctor, Tonith, Tuuk, and Pundar.
+- **Devastation:** Sai Sircu
+- **Subjugator:** Shu Mai
+- Exceptions can be edited here: `Data\Scripts\Library\RespawnExceptions.lua`
 
 ### One Planet Start
 
 - Heroes spawn at the beginning of FTGU single planet start games, matching the era selected.
 - Enabled Republic command staff and clones disabled in era 1.
 
-### How to Edit GameConstants
+## How to Edit GameConstants
 
-To disable or edit the time for a respawn:
+**To edit respawn time:**
 
-1. Go to `Data/XML`
+1. Go to `Steam\steamapps\workshop\content\32470\2792708794\Data\XML`
 2. Open `GameConstants.xml`
 3. Find line (418): `<Default_Hero_Respawn_Time>400</Default_Hero_Respawn_Time>`
-4. You can set it to a negative number to deactivate it in between saved games.
 
 # License
 
