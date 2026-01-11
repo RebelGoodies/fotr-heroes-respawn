@@ -20,10 +20,24 @@ function GenericSwap:new(event_name, player, from_list, to_list)
     
 end
 
+function force_hero_respawn(hero_team)
+	local plot = Get_Story_Plot("Conquests\\Story_Sandbox_Government_Rep.xml")
+    if plot then
+		local respawnEvent = plot.Get_Event("Force_Respawn")
+		if respawnEvent then
+			respawnEvent.Set_Reward_Parameter(0, hero_team)
+			Story_Event("FORCE_RESPAWN_HERO")
+		end
+	end
+end
+
 function GenericSwap:activate()
     --Logger:trace("entering GenericSwap:activate")
     for i, fromUnit in pairs(self.From_List) do
-        local toUnit = self.To_List[i]		
+        local toUnit = self.To_List[i]
+		if self.Story_Tag == "CLONE_UPGRADES" then
+			force_hero_respawn(fromUnit .. "_Team")
+		end
 		UnitUtil.ReplaceAtLocation(fromUnit, toUnit)
     end
 end

@@ -14,7 +14,7 @@
 --*       File Created:      Monday, 24th February 2020 02:19                                      *
 --*       Author:            [TR] Jorritkarwehr                                                    *
 --*       Last Modified:     Wednesday, 17th August 2022 04:31 						               *
---*       Modified By:       Mord 				                                                   *
+--*       Modified By:       Not Mord 				                                               *
 --*       Copyright:         Thrawns Revenge Development Team                                      *
 --*       License:           This code may not be used without the author's explicit permission    *
 --**************************************************************************************************
@@ -49,9 +49,10 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 	crossplot:subscribe("CLONE_UPGRADES", self.Phase_II, self)
 	
 	admiral_data = {
+		group_name = "Admiral",
 		total_slots = 6,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 3,		--Slots open to buy
-		vacant_hero_slots = 0,	    --Slots that need another action to move to free
+		vacant_hero_slots = 3,	    --Slots that need another action to move to free
 		vacant_limit = 3,           --Number of times a lost slot can be reopened
 		initialized = false,
 		full_list = { --All options for reference operations
@@ -88,9 +89,10 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 	}
 	
 	moff_data = {
+		group_name = "Sector Commander",
 		total_slots = 2,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 1,		--Slots open to buy
-		vacant_hero_slots = 0,	    --Slots that need another action to move to free
+		vacant_hero_slots = 1,	    --Slots that need another action to move to free
 		vacant_limit = 1,           --Number of times a lost slot can be reopened
 		initialized = false,
 		full_list = { --All options for reference operations
@@ -109,7 +111,7 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 		available_list = {--Heroes currently available for purchase. Seeded with those who have no special prereqs
 			"Hauser",
 			"Wessel",
-			"Seerdon",
+			"Seerdon",			
 			--"Coy",
 		},
 		story_locked_list = {},--Heroes not accessible, but able to return with the right conditions
@@ -121,9 +123,10 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 	}
 	
 	council_data = {
-		total_slots = 3,			--Max slot number. Set at the start of the GC and never change
+		group_name = "Jedi",
+		total_slots = 6,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 3,		--Slots open to buy
-		vacant_hero_slots = 0,	    --Slots that need another action to move to free
+		vacant_hero_slots = 3,	    --Slots that need another action to move to free
 		vacant_limit = 3,           --Number of times a lost slot can be reopened
 		initialized = false,
 		full_list = { --All options for reference operations
@@ -161,9 +164,10 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 	}
 	
 	clone_data = {
-		total_slots = 2,			--Max slot number. Set at the start of the GC and never change
-		free_hero_slots = 2,		--Slots open to buy
-		vacant_hero_slots = 0,	    --Slots that need another action to move to free
+		group_name = "Clone Officer",
+		total_slots = 6,			--Max slot number. Set at the start of the GC and never change
+		free_hero_slots = 3,		--Slots open to buy
+		vacant_hero_slots = 3,	    --Slots that need another action to move to free
 		vacant_limit = 4,           --Number of times a lost slot can be reopened
 		initialized = false,
 		full_list = { --All options for reference operations
@@ -203,9 +207,10 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 	}
 	
 	commando_data = {
-		total_slots = 2,			--Max slot number. Set at the start of the GC and never change
+		group_name = "Commando",
+		total_slots = 4,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 2,		--Slots open to buy
-		vacant_hero_slots = 0,	    --Slots that need another action to move to free
+		vacant_hero_slots = 2,	    --Slots that need another action to move to free
 		vacant_limit = 2,           --Number of times a lost slot can be reopened
 		initialized = false,
 		full_list = { --All options for reference operations
@@ -239,9 +244,10 @@ function RepublicHeroes:new(gc, herokilled_finished_event, human_player, hero_cl
 	}
 	
 	general_data = {
-		total_slots = 2,			--Max slot number. Set at the start of the GC and never change
+		group_name = "Army Officer",
+		total_slots = 3,			--Max slot number. Set at the start of the GC and never change
 		free_hero_slots = 2,		--Slots open to buy
-		vacant_hero_slots = 0,	    --Slots that need another action to move to free
+		vacant_hero_slots = 1,	    --Slots that need another action to move to free
 		vacant_limit = 2,           --Number of times a lost slot can be reopened
 		initialized = false,
 		full_list = { --All options for reference operations
@@ -351,32 +357,32 @@ function switch_views(new_view)
 		Enable_Hero_Options(general_data)
 	end
 	
-	if old_view == 1 and admiral_data.vacant_limit > -1 and admiral_data.vacant_hero_slots < admiral_data.total_slots then
+	if old_view == 1 and admiral_data.vacant_hero_slots < admiral_data.total_slots then
 		tech_unit = Find_Object_Type("VIEW_ADMIRALS")
 		moff_data.active_player.Unlock_Tech(tech_unit)
 		Disable_Hero_Options(admiral_data)
 	end
-	if old_view == 2 and moff_data.vacant_limit > -1 and moff_data.vacant_hero_slots < moff_data.total_slots then
+	if old_view == 2 and moff_data.vacant_hero_slots < moff_data.total_slots then
 		tech_unit = Find_Object_Type("VIEW_MOFFS")
 		moff_data.active_player.Unlock_Tech(tech_unit)
 		Disable_Hero_Options(moff_data)
 	end
-	if old_view == 3 and council_data.vacant_limit > -1 and council_data.vacant_hero_slots < council_data.total_slots then
+	if old_view == 3 and council_data.vacant_hero_slots < council_data.total_slots then
 		tech_unit = Find_Object_Type("VIEW_COUNCIL")
 		moff_data.active_player.Unlock_Tech(tech_unit)
 		Disable_Hero_Options(council_data)
 	end
-	if old_view == 4 and clone_data.vacant_limit > -1 and clone_data.vacant_hero_slots < clone_data.total_slots then
+	if old_view == 4 and clone_data.vacant_hero_slots < clone_data.total_slots then
 		tech_unit = Find_Object_Type("VIEW_CLONES")
 		moff_data.active_player.Unlock_Tech(tech_unit)
 		Disable_Hero_Options(clone_data)
 	end
-	if old_view == 5 and commando_data.vacant_limit > -1 and commando_data.vacant_hero_slots < commando_data.total_slots then
+	if old_view == 5 and commando_data.vacant_hero_slots < commando_data.total_slots then
 		tech_unit = Find_Object_Type("VIEW_COMMANDOS")
 		moff_data.active_player.Unlock_Tech(tech_unit)
 		Disable_Hero_Options(commando_data)
 	end
-	if old_view == 6 and general_data.vacant_limit > -1 and general_data.vacant_hero_slots < general_data.total_slots then
+	if old_view == 6 and general_data.vacant_hero_slots < general_data.total_slots then
 		tech_unit = Find_Object_Type("VIEW_GENERALS")
 		moff_data.active_player.Unlock_Tech(tech_unit)
 		Disable_Hero_Options(general_data)
@@ -429,6 +435,14 @@ function RepublicHeroes:init_heroes()
 	
 	if tech_level > 3 then
 		Handle_Hero_Add("Trachta", moff_data)
+	end
+	if moff_data.active_player.Is_Human() then
+		switch_views(6)
+		switch_views(5)
+		switch_views(4)
+		switch_views(3)
+		switch_views(2)
+		switch_views(1)
 	end
 end
 

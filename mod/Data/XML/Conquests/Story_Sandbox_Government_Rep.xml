@@ -2,6 +2,34 @@
 
 <Story>
 
+	<Event Name="Force_Respawn_Event">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>FORCE_RESPAWN_HERO</Event_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Force_Respawn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>FORCE_RESPAWN</Reward_Type>
+		<Reward_Param1></Reward_Param1> <!-- Filled by lua -->
+		<Prereq>Force_Respawn_Event</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<!-- <Event Name="Remove_Hero_Event">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>REMOVE_HERO</Event_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Hero">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1></Reward_Param1>
+		<Prereq>Remove_Hero_Event</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event> -->
+
 	<!--- Sector Force Events -->
 
 	<Event Name="Sector_Forces_Integrated">
@@ -491,4 +519,166 @@
 		<Reward_Param1>Jedi_Temple</Reward_Param1>
 		<Prereq>Convo_Order66_16</Prereq>
 	</Event>
+	
+	<Event Name="Remove_Obi_Wan">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Obi_Wan_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Obi_Wan_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Obi_Wan_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Yoda">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Yoda_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Yoda_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Yoda_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Mace">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Mace_Windu_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Mace_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Mace_Windu_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Plo">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Plo_Koon_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Kit">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Kit_Fisto_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Kit_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Kit_Fisto_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Mundi">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Ki_Adi_Mundi_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Mundi_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Ki_Adi_Mundi_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Luminara">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Luminara_Unduli_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Luminara_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Luminara_Unduli_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Barriss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Barriss_Offee_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Barriss_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Barriss_Offee_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Ahsoka">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Ahsoka_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Ahsoka_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Ahsoka_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Aayla">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Aayla_Secura_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Aayla_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Aayla_Secura_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Shaak">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Shaak_Ti_Delta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Shaak_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Shaak_Ti_Eta_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Kota">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Rahm_Kota_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Giddean">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Giddean_Team</Reward_Param1>
+		<Prereq>Convo_Order66_16</Prereq>
+	</Event>
+	
 </Story>

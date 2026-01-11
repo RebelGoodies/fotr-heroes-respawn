@@ -150,12 +150,10 @@
 	</Event>
 	
 	<Event Name="Remove_Trench">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>199</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Trench_Invincible</Reward_Param1>
 		<Prereq>Trench_Dies</Prereq>
-		<Perpetual>true</Perpetual>
 	</Event>
 
 	<Event Name="Trench_Returns_Timer">

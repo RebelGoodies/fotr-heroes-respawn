@@ -1,27 +1,23 @@
 return {
 	["EMPIRE"] = {
-		["KAMINO"] = {
-		"Pestage_Team",
-		
-		"Yoda_Delta_Team",
-		"Shaak_Ti_Delta_Team",
-		"Mace_Windu_Delta_Team",
-		"Aayla_Secura_Delta_Team",
-		"Kit_Fisto_Delta_Team",
-		"Plo_Koon_Delta_Team",
-		
-		"Seerdon_Invincible",
-		"Dallin_Kebir"}
-    },
-    ["REBEL"] = {
-		["SERENNO"] = {
-		"Gunray_Team",
-		"Dooku_Team",
-		"Sora_Bulq_Team",
-		"SevRance_Team",
-		"Whorm_Team",
-		"Durge_Team",
-		
-		"TF1726_Munificent"}
-    }
+	["CORUSCANT"] = {"Pestage_Team"},
+	["ALSAKAN"] = {"Mace_Windu_Delta_Team"},
+	["KUAT"] = {"Plo_Koon_Delta_Team", "Seerdon_Invincible"},
+	["ALDERAAN"] = {"Rom_Mohc_Team"},
+	["ORD_MANTELL"] = {"Dallin_Kebir"},
+	["ROTHANA"] = {"Solomahal_Team", "Maarisa_Captor"},
+	["TIBRIN"] = {"Rahm_Kota_Team", "Grumby_Invincible"}
+	},
+	["REBEL"] = {
+	["RAXUS_SECOND"] = {"SevRance_Team"},
+	["YAGDHUL"] = {"Durge_Team"},
+	["SERENNO"] = {"Dooku_Team"},
+	["QUELL"] = {"TF1726_Munificent"},
+	["CHRISTOPHSIS"] = {"Whorm_Team"},
+	["GEONOSIS"] = {"Trench_Invincible"},
+	["CATO_NEIMOIDIA"] = {"Gunray_Team"}
+	},
+	["INDEPENDENT_FORCES"] = {
+	["FLORRUM"] = {"Hondo_Ohnaka_Team"}
+	}
 }

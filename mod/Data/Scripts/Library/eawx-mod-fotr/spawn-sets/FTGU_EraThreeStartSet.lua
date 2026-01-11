@@ -1,39 +1,24 @@
 return {
 	["EMPIRE"] = {
-		["KAMINO"] = {
-		"Pestage_Team",
-		"Yoda_Eta_Team",
-		"Romodi_Team",
-		"Ozzel_Team",
-		"Fordo2_Team",
-		"Cody2_Team",
-		"Rex2_Team",
-		"Delta_Squad",
-		
-		"Shaak_Ti_Eta_Team",
-		"Mace_Windu_Eta_Team",
-		"Aayla_Secura_Eta_Team",
-		"Plo_Koon_Delta_Team",
-		"Kit_Fisto_Eta_Team",
-		"Obi_Wan_Eta_Team",
-		"Anakin_Eta_Team",
-		"Ahsoka_Eta_Team",
-		
-		"Grant_Venator",
-		"Tallon_Sundiver"}
-    },
-    ["REBEL"] = {
-		["SERENNO"] = {
-		"Gunray_Team",
-		"Dooku_Team",
-		"Ventress_Team",
-		"SevRance_Team",
-		"Kalani_Team",
-		"Vazus_Team",
-		"Durge_Team",
-		
-		"TF1726_Munificent",
-		"Calli_Trilm_Bulwark",
-		"AutO_Providence"}
-    }
+	["CORUSCANT"] = {"Yoda_Eta_Team", "Pestage_Team"},
+	["KAMINO"] = {"Delta_Squad", "Cody_Team", "Obi_Wan_Eta_Team"},
+	["CARIDA"] = {"Rom_Mohc_Team"},
+	["NABOO"] = {"Rex_Team", "Anakin_Eta_Team", "Ahsoka_Eta_Team", "Yularen_Resolute"},
+	["KASHYYYK"] = {"Aayla_Secura_Eta_Team", "Tallon_Sundiver"},
+	["RISHI"] = {"Fordo_Team"},
+	["QIILURA"] = {"Romodi_Team"},
+	["ROTHANA"] = {"Tarkin_Venator"},
+	["KUAT"] = {"Coburn_Triumphant"},
+	},
+	["REBEL"] = {
+	["RAXUS_SECOND"] = {"Dooku_Team", "Trench_Invulnerable"},
+	["YAGDHUL"] = {"Durge_Team", "Ventress_Team"},
+	["SERENNO"] = {"Grievous_Team_Recusant", "Sora_Bulq_Team"},
+	["UMBARA"] = {"Kalani_Team"},
+	["QUELL"] = {"TF1726_Munificent"},
+	["SULLUST"] = {"Gunray_Team", "AutO_Providence"}
+	},
+	["INDEPENDENT_FORCES"] = {
+	["FLORRUM"] = {"Hondo_Ohnaka_Team"}
+	}
 }

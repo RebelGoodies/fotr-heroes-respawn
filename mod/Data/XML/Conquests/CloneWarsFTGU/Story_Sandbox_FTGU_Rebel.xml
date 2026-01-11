@@ -13,33 +13,13 @@
 
 	<Event Name="Universal_Story_Start">
 		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>2</Event_Param1>
+		<Event_Param1>0</Event_Param1>
 	</Event>
-	
-	<Event Name="Spawn_Trench">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>1200</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Trench_Invincible</Reward_Param1>
-		<Reward_Param2>Geonosis</Reward_Param2>
-		<Prereq>Universal_Story_Start</Prereq>
-	</Event>
-	
-	<Event Name="Spawn_Grievous">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>600</Event_Param1>
-		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Grievous_Team_Recusant</Reward_Param1>
-		<Reward_Param2>Geonosis</Reward_Param2>
-		<Prereq>Universal_Story_Start</Prereq>
-	</Event>
-	
-	
+ 
+	<!-- ********************************* Grievous Upgrades *********************** -->
+	<!-- ********************************* Grievous Upgrades *********************** -->
+	<!-- ********************************* Grievous Upgrades *********************** -->
 
-	<!-- ********************************* Grievous Upgrades *********************** -->
-	<!-- ********************************* Grievous Upgrades *********************** -->
-	<!-- ********************************* Grievous Upgrades *********************** -->
-		
 	<Event Name="Invisible_Hand_Dies_Speech">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>GRIEVOUS_RESPAWN_MUNIFICENT</Event_Param2>
@@ -57,7 +37,7 @@
 		<Perpetual>true</Perpetual>
 		<!--<Branch>Faction_Branch_CIS</Branch> Republic player should actually know -->
 	</Event>
-			
+
 	<Event Name="Malevolence_Dies_Speech">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>GRIEVOUS_RESPAWN_INVISIBLE_HAND</Event_Param2>
@@ -75,7 +55,7 @@
 		<Perpetual>true</Perpetual>
 		<!--<Branch>Faction_Branch_CIS</Branch> Republic player should actually know -->
 	</Event>
-	
+
 	<Event Name="Malevolence_Dies_Recu_Speech">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
 		<Event_Param2>GRIEVOUS_RESPAWN_RECUSANT</Event_Param2>
@@ -93,32 +73,28 @@
 		<Perpetual>true</Perpetual>
 		<!--<Branch>Faction_Branch_CIS</Branch> Republic player should actually know -->
 	</Event>
-	
+
 	<!-- ********************************* Trench Returns *********************** -->
 	<!-- ********************************* Trench Returns *********************** -->
 	<!-- ********************************* Trench Returns *********************** -->
 	
 	<Event Name="Trench_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Trench_Invincible</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
+  		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>TRENCH_COUNTDOWN_BEGINS</Event_Param2>
 	</Event>
 	
 	<Event Name="Remove_Trench">
-		<Event_Type>STORY_ELAPSED</Event_Type>
-		<Event_Param1>199</Event_Param1>
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Trench_Invincible</Reward_Param1>
 		<Prereq>Trench_Dies</Prereq>
-		<Perpetual>true</Perpetual>
 	</Event>
 
 	<Event Name="Trench_Returns_Timer">
 		<Event_Type>STORY_ELAPSED</Event_Type>
 		<Event_Param1>200</Event_Param1>
 		<Reward_Type>SPAWN_HERO</Reward_Type>
-		<Reward_Param1>Trench_Generic</Reward_Param1>
+		<Reward_Param1>Trench_Invulnerable</Reward_Param1>
 		<Reward_Param2>Geonosis</Reward_Param2>
 		<Prereq>Trench_Dies</Prereq>
 	</Event>
@@ -134,7 +110,7 @@
 		<Reward_Param6 />
 		<Reward_Param7 />
 		<Reward_Param8></Reward_Param8>
-		<Reward_Param9><!--Grievous_Loop--></Reward_Param9>
+		<Reward_Param9></Reward_Param9>
 		<Reward_Param10>0</Reward_Param10>
 		<Prereq>Trench_Returns_Timer</Prereq>
 		<!--<Branch>Faction_Branch_CIS</Branch> Republic player should actually know -->
@@ -180,5 +156,5 @@
 		<!--<Branch>Faction_Branch_CIS</Branch> Republic player should actually know -->
 	</Event>
 
-
+	
 </Story>

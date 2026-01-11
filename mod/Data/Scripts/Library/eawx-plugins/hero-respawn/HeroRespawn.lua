@@ -79,20 +79,22 @@ function HeroRespawn:check_durge()
 		local p_CIS = Find_Player("Rebel")
 		local planet = StoryUtil.FindFriendlyPlanet(p_CIS)
 		if planet then
-			SpawnList({"Durge_Team"}, planet, p_CIS, true, false)
 			Story_Event("DURGE_RESPAWNS")
+			SpawnList({"Durge_Team"}, planet, p_CIS, true, false)
 			self.durge_chance = self.durge_chance - 10
 			StoryUtil.ShowScreenText("Revive chance: " .. tostring(self.durge_chance), 5)
 		else
 			Story_Event("DURGE_GONE")
+			self.durge_chance = self.durge_chance + 5
 		end
 	else
 		Story_Event("DURGE_GONE")
+		self.durge_chance = self.durge_chance + 5
 	end
 end
 
 function HeroRespawn:start_cyber_trench_countdown()
 	--Logger:trace("entering HeroRespawn:start_cyber_trench_countdown")
-	
+	--StoryUtil.ShowScreenText("Trench will return.", 5)
 	Story_Event("TRENCH_COUNTDOWN_BEGINS")
 end

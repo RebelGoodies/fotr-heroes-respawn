@@ -54,7 +54,8 @@ function BlockadeAttrition:attrition(planet)
 		
 		for _, faction_unit_table in pairs(orbiting_units_per_faction) do
 			for i, unit in pairs(faction_unit_table) do
-				if not (unit.Is_Category("SuperCapital") or unit.Is_Category("SpaceHero") or unit.Is_Category("LandHero") or unit.Is_Category("NonCombatHero") or unit.Has_Property("GTSImmune")) then
+				local object_type = unit.Get_Type()
+				if not (object_type.Is_Hero() or unit.Is_Category("SuperCapital") or unit.Is_Category("SpaceHero") or unit.Is_Category("LandHero") or unit.Is_Category("NonCombatHero") or unit.Has_Property("GTSImmune")) then
 					table.insert(orbiting_units_to_destroy, unit)
 				end
 			end
