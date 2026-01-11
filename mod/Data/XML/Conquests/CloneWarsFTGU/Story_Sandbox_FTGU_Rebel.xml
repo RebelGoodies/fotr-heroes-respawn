@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+
+ <Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+ </Event>
+
+	
+</Story>
