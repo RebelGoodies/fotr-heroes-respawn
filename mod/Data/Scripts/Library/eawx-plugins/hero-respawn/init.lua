@@ -12,9 +12,9 @@
 --*                                                                                                *
 --*       File:              init.lua                                                              *
 --*       File Created:      Monday, 24th February 2020 02:16                                      *
---*       Author:            [TR] Jorritkarwehr                                                             *
+--*       Author:            [TR] Jorritkarwehr                                                    *
 --*       Last Modified:     Monday, 24th February 2020 03:57                                      *
---*       Modified By:       [TR] Jorritkarwehr                                                             *
+--*       Modified By:       [TR] Jorritkarwehr                                                    *
 --*       Copyright:         Thrawns Revenge Development Team                                      *
 --*       License:           This code may not be used without the author's explicit permission    *
 --**************************************************************************************************
@@ -26,7 +26,12 @@ return {
     target = PluginTargets.never(),
     init = function(self, ctx)
         local galactic_conquest = ctx.galactic_conquest
-        return HeroRespawn(galactic_conquest.Events.GalacticHeroKilled, galactic_conquest.HumanPlayer)
+        local Handler = HeroRespawn(galactic_conquest.Events.GalacticHeroKilled, galactic_conquest.HumanPlayer, galactic_conquest)
+        if ctx.id ~= "HISTORICAL" then
+            --Popup breaks only when used with Limitless Heroes submod.
+            crossplot:subscribe("EXECUTE_ORDER_66", Handler.Order_66_Handler, Handler)
+        end
+        return Handler
     end
 }
  

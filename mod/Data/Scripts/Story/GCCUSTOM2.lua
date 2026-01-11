@@ -25,6 +25,7 @@ function Initialize(message)
 end
 
 function Size_Choice(choice)
+	--[[
 	p_Republic = Find_Player("Empire")
 	if p_Republic.Is_Human() then
 		if choice == "CUSTOM_GC_SMALL_START" then
@@ -37,6 +38,7 @@ function Size_Choice(choice)
 			crossplot:publish("COMMAND_STAFF_EXIT", {"Seerdon"}, 2)
 		end
 	end
+	--]]
 	if GlobalValue.Get("CURRENT_ERA") > 1 then
 		crossplot:publish("VENATOR_HEROES", "empty")
 	end

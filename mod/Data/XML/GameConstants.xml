@@ -4,23 +4,23 @@
 	<!-- Ordered list of hotkey fast load debug maps for keys CTRL+SHIFT+1 through CTRL+SHIFT+9 -->
 	<!-- Note: Map names cannot have SPACES in them due to XML parsing! Also, keep ordered CTRL+SHIFT+1 through CTRL+SHIFT+9 -->
 	<!-- CTRL+SHIFT+0 is a special key for loading the galactic campaign named in the Debug_Hot_Key_Load_Campaign tag. -->
-	<!-- Each map should be paired with a script name entry even if the entry is empty -->
+   <!-- Each map should be paired with a script name entry even if the entry is empty -->
 
-	<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\!End_Cine_Test.ted </Debug_Hot_Key_Load_Map>
-	<Debug_Hot_Key_Load_Map_Script> Story_Plots_UM00_CIN_Test.xml </Debug_Hot_Key_Load_Map_Script>
+		<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\!End_Cine_Test.ted </Debug_Hot_Key_Load_Map>
+		<Debug_Hot_Key_Load_Map_Script> Story_Plots_UM00_CIN_Test.xml </Debug_Hot_Key_Load_Map_Script>
 
-	<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\E3_Demo_Space.ted </Debug_Hot_Key_Load_Map>
-	<Debug_Hot_Key_Load_Map_Script> Story_Plots_Demo_DeathStar.xml </Debug_Hot_Key_Load_Map_Script>
+		<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\E3_Demo_Space.ted </Debug_Hot_Key_Load_Map>
+		<Debug_Hot_Key_Load_Map_Script> Story_Plots_Demo_DeathStar.xml </Debug_Hot_Key_Load_Map_Script>
 
-	<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\UM06_Dark_Ally.ted </Debug_Hot_Key_Load_Map>
-	<Debug_Hot_Key_Load_Map_Script> Story_Plots_Underworld_M06_LAND.xml </Debug_Hot_Key_Load_Map_Script>
+		<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\UM06_Dark_Ally.ted </Debug_Hot_Key_Load_Map>
+		<Debug_Hot_Key_Load_Map_Script> Story_Plots_Underworld_M06_LAND.xml </Debug_Hot_Key_Load_Map_Script>
 
-	<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\UM07_Cloud_City_Conflict.ted </Debug_Hot_Key_Load_Map>
-	<Debug_Hot_Key_Load_Map_Script> Story_Plots_Underworld_M07_LAND.xml </Debug_Hot_Key_Load_Map_Script>
+		<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\UM07_Cloud_City_Conflict.ted </Debug_Hot_Key_Load_Map>
+		<Debug_Hot_Key_Load_Map_Script> Story_Plots_Underworld_M07_LAND.xml </Debug_Hot_Key_Load_Map_Script>
 
-	<Debug_Hot_Key_Load_Campaign> E3_Demo_Underworld </Debug_Hot_Key_Load_Campaign>
+		<Debug_Hot_Key_Load_Campaign> E3_Demo_Underworld </Debug_Hot_Key_Load_Campaign>
 
-	<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\Demo_Attract.ted </Debug_Hot_Key_Load_Map>
+		<Debug_Hot_Key_Load_Map> .\\Data\\Art\\Maps\\Demo_Attract.ted </Debug_Hot_Key_Load_Map>
 
 	<Tactical_Command_Bar_Buildable_Row_Count>24</Tactical_Command_Bar_Buildable_Row_Count>
 	<Strategic_Command_Bar_Buildable_Row_Count>34</Strategic_Command_Bar_Buildable_Row_Count>
@@ -207,7 +207,7 @@
 	<Minimum_Tactical_Overrun_Time_In_Secs> 100.0 </Minimum_Tactical_Overrun_Time_In_Secs>
 	<Tactical_Overrun_Multiple>999.0f</Tactical_Overrun_Multiple> 		<!-- Permanently reveals FOW when X-1 odds reached. -->
 
-<!--- <Overrun_Auto_Resolve_Multiple>8.0f</Overrun_Auto_Resolve_Multiple>  --> 		<!-- Comment out to disable overrun auto-resolve -->
+<!---	<Overrun_Auto_Resolve_Multiple>8.0f</Overrun_Auto_Resolve_Multiple>  --> 		<!-- Comment out to disable overrun auto-resolve -->
 
 	<!-- How long to countdown before a tactical retreat is allowed -->
 	<Space_Retreat_Allowed_Countdown_Seconds> 30.0 </Space_Retreat_Allowed_Countdown_Seconds>
@@ -372,8 +372,8 @@
 	<HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture> HARD_POINT_WEAPON_SPECIAL, I_TR_HP_MASSDRIVER_TRACKED </HardPoint_Target_Reticle_Friendly_Disabled_Tracked_Texture>
 
 	<!-- -->
-
-
+	
+	
 	<HardPoint_Target_Reticle_Enemy_Texture> HARD_POINT_ENABLE_SPECIAL_ABILITY, I_TR_HP_Proton </HardPoint_Target_Reticle_Enemy_Texture>
 	<HardPoint_Target_Reticle_Enemy_Tracked_Texture> HARD_POINT_ENABLE_SPECIAL_ABILITY, I_TR_HP_Proton_Tracked </HardPoint_Target_Reticle_Enemy_Tracked_Texture>
 	<HardPoint_Target_Reticle_Friendly_Texture> HARD_POINT_ENABLE_SPECIAL_ABILITY, I_TR_HP_Proton </HardPoint_Target_Reticle_Friendly_Texture>
@@ -403,7 +403,7 @@
 	<!-- UNUSED - unit cap is now per faction in Factions.xml
 	<Space_Tactical_Unit_Cap>40</Space_Tactical_Unit_Cap> -->
 	<!-- <Allow_Reinforcement_Percentage_Normalized> 0.0 </Allow_Reinforcement_Percentage_Normalized> -->
-	<Default_Hero_Respawn_Time>-360.0</Default_Hero_Respawn_Time>
+	<Default_Hero_Respawn_Time>400.0</Default_Hero_Respawn_Time> <!-- 40 is one week or cycle ingame -->
 
 	<LandFOWColor>130,130,130,0</LandFOWColor>
 	<SpaceFOWColor>255,255,255,255</SpaceFOWColor>
@@ -481,14 +481,14 @@
 	<Encyclopedia_Icon_X_Offset>39</Encyclopedia_Icon_X_Offset>
 	<Encyclopedia_Icon_Y_Offset>-12</Encyclopedia_Icon_Y_Offset>
 	<Encyclopedia_Class_Y_Offset>5</Encyclopedia_Class_Y_Offset>
-	<Encyclopedia_Fade_Rate>4.0</Encyclopedia_Fade_Rate>
-	<Encyclopedia_Min_Display_Time>1.0</Encyclopedia_Min_Display_Time>
+   <Encyclopedia_Fade_Rate>4.0</Encyclopedia_Fade_Rate>
+   <Encyclopedia_Min_Display_Time>1.0</Encyclopedia_Min_Display_Time>
 
-	<Min_Accuracy_For_Icon> 0.4 </Min_Accuracy_For_Icon>
-	<Min_Sight_Range_For_Icon> 0.5 </Min_Sight_Range_For_Icon>
+   <Min_Accuracy_For_Icon> 0.4 </Min_Accuracy_For_Icon>
+   <Min_Sight_Range_For_Icon> 0.5 </Min_Sight_Range_For_Icon>
 
-	<Left_Queue_Tint>128 128 255 215</Left_Queue_Tint>
-	<Right_Queue_Tint>255 128 128 215</Right_Queue_Tint>
+   <Left_Queue_Tint>128 128 255 215</Left_Queue_Tint>
+   <Right_Queue_Tint>255 128 128 215</Right_Queue_Tint>
 
 	<Icons_Per_Column>13</Icons_Per_Column>
 
@@ -788,7 +788,7 @@
 		DamageL_Lightsaber,
 		DamageL_Flak,
 		DamageL_Flamer,
-		DamageL_Ion,
+		DamageL_Ion,		
 		DamageL_Sonic,
 		DamageL_Disruptor,
 		DamageL_Slug,
@@ -805,11 +805,11 @@
 		DamageS_TurboIon,
 		DamageS_Concussion,
 		DamageS_Proton,
-		DamageS_ProtonBomb,
+		DamageS_ProtonBomb,		
 		DamageS_HypervelocityGun,
 		DamageS_GTSIon,
-		DamageS_SeismicCharge,
-		DamageS_Flechette,
+		DamageS_SeismicCharge,		
+		DamageS_Flechette,		
 
 		<!-- Base Game Residual Damage Types -->
 		Damage_Rancor,
@@ -869,10 +869,10 @@
 		ArmourG_Structure,
 		ArmourG_Speeder,
 		ArmourG_SpeederHeavy,
-
+		
 		<!-- TR Rework Space Armour Types -->
 		ShieldS_Fighter,
-		ShieldS_FighterHeavy,
+		ShieldS_FighterHeavy,		
 		ShieldS_Gunship,
 		ShieldS_Corvette,
 		ShieldS_Frigate,
@@ -880,14 +880,14 @@
 		ShieldS_Capital,
 		ShieldS_SuperCapital,
 		ArmourS_Fighter,
-		ArmourS_FighterHeavy,
+		ArmourS_FighterHeavy,		
 		ArmourS_Gunship,
 		ArmourS_Corvette,
 		ArmourS_Frigate,
 		ArmourS_HeavyFrigate,
 		ArmourS_Capital,
 		ArmourS_SuperCapital,
-
+		
 		<!-- Base Game Residual Armour Types -->
 		Shield_Default,
         Shield_Capital,
@@ -942,9 +942,9 @@
 		Armor_Bunker,
 		Armor_SSD
 	</Armor_Types>
-
+	
 	<!-- Damage Armour Reworked Matrix - Ground -->
-
+	
 	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_LightVehicle, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantryBlaster, ShieldG_HeavyVehicle, 0.125 </Damage_To_Armor_Mod>
@@ -972,7 +972,7 @@
 	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Structure, 0.1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_Speeder, 0.50 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiInfantryBlaster, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_LightVehicle, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ShieldG_HeavyVehicle, 0.5 </Damage_To_Armor_Mod>
@@ -986,7 +986,7 @@
 	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Structure, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_Speeder, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiVehicleBlaster, ArmourG_SpeederHeavy, 0.5 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
@@ -1000,7 +1000,7 @@
 	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Structure, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_Speeder, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ConcussionWarhead, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
@@ -1014,7 +1014,7 @@
 	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Structure, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ProtonWarhead, ArmourG_SpeederHeavy, 1 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
@@ -1028,7 +1028,7 @@
 	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Structure, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_ThermalWarhead, ArmourG_SpeederHeavy, 0.75 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_Infantry, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_MassDriver, ShieldG_HeavyVehicle, 1 </Damage_To_Armor_Mod>
@@ -1042,7 +1042,7 @@
 	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Structure, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_MassDriver, ArmourG_SpeederHeavy, 1 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_Infantry, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_LightVehicle, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Lightsaber, ShieldG_HeavyVehicle, 0.25 </Damage_To_Armor_Mod>
@@ -1056,7 +1056,7 @@
 	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Structure, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Lightsaber, ArmourG_SpeederHeavy, 1 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_Infantry, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flak, ShieldG_HeavyVehicle, 0.25 </Damage_To_Armor_Mod>
@@ -1069,7 +1069,7 @@
 	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Structure, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_Speeder, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_SpeederHeavy, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageL_Flak, ArmourG_SpeederHeavy, 0.75 </Damage_To_Armor_Mod>	
 
 	<Damage_To_Armor_Mod> DamageL_Flamer, ShieldG_Infantry, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flamer, ShieldG_LightVehicle, 0.1 </Damage_To_Armor_Mod>
@@ -1083,9 +1083,9 @@
 	<Damage_To_Armor_Mod> DamageL_Flamer, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flamer, ArmourG_Structure, 0.8 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Flamer, ArmourG_Speeder, 0.3 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageL_Flamer, ArmourG_SpeederHeavy, 0.15 </Damage_To_Armor_Mod>
-
-
+	<Damage_To_Armor_Mod> DamageL_Flamer, ArmourG_SpeederHeavy, 0.15 </Damage_To_Armor_Mod>	
+	
+	
 	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_Infantry, 2 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_LightVehicle, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Ion, ShieldG_HeavyVehicle, 0.75 </Damage_To_Armor_Mod>
@@ -1099,7 +1099,7 @@
 	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Structure, 0.1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_Speeder, 0.3 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Ion, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageL_Sonic, ShieldG_Infantry, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Sonic, ShieldG_LightVehicle, 0.15 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Sonic, ShieldG_HeavyVehicle, 0.1 </Damage_To_Armor_Mod>
@@ -1112,8 +1112,8 @@
 	<Damage_To_Armor_Mod> DamageL_Sonic, ArmourG_Hero, 0.2 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Sonic, ArmourG_Structure, 0.05 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Sonic, ArmourG_Speeder, 0.15 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageL_Sonic, ArmourG_SpeederHeavy, 0.1 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageL_Sonic, ArmourG_SpeederHeavy, 0.1 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageL_Disruptor, ShieldG_Infantry, 0.2 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Disruptor, ShieldG_LightVehicle, 0.15 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Disruptor, ShieldG_HeavyVehicle, 0.1 </Damage_To_Armor_Mod>
@@ -1126,8 +1126,8 @@
 	<Damage_To_Armor_Mod> DamageL_Disruptor, ArmourG_Hero, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Disruptor, ArmourG_Structure, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Disruptor, ArmourG_Speeder, 0.9 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageL_Disruptor, ArmourG_SpeederHeavy, 0.8 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageL_Disruptor, ArmourG_SpeederHeavy, 0.8 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageL_Slug, ShieldG_Infantry, 1.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Slug, ShieldG_LightVehicle, 1.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Slug, ShieldG_HeavyVehicle, 1.0 </Damage_To_Armor_Mod>
@@ -1140,8 +1140,8 @@
 	<Damage_To_Armor_Mod> DamageL_Slug, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Slug, ArmourG_Structure, 0.1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Slug, ArmourG_Speeder, 0.4 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageL_Slug, ArmourG_SpeederHeavy, 0.2 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageL_Slug, ArmourG_SpeederHeavy, 0.2 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ShieldG_Infantry, 1.00 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ShieldG_LightVehicle, 1.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ShieldG_HeavyVehicle, 1.0 </Damage_To_Armor_Mod>
@@ -1154,8 +1154,8 @@
 	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ArmourG_Hero, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ArmourG_Structure, 0.025 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ArmourG_Speeder, 0.2 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ArmourG_SpeederHeavy, 0.05 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageL_InfantrySlug, ArmourG_SpeederHeavy, 0.05 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageL_Plasma, ShieldG_Infantry, 1.00 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Plasma, ShieldG_LightVehicle, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Plasma, ShieldG_HeavyVehicle, 0.5 </Damage_To_Armor_Mod>
@@ -1183,7 +1183,7 @@
 	<Damage_To_Armor_Mod> DamageL_InfantryPulseWave, ArmourG_Structure, 0.05 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantryPulseWave, ArmourG_Speeder, 0.06 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantryPulseWave, ArmourG_SpeederHeavy, 0.03 </Damage_To_Armor_Mod>
-	
+
 	<Damage_To_Armor_Mod> DamageL_AntiInfantryPulseWave, ShieldG_Infantry, 1.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiInfantryPulseWave, ShieldG_LightVehicle, 0.1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_AntiInfantryPulseWave, ShieldG_HeavyVehicle, 0.05 </Damage_To_Armor_Mod>
@@ -1213,9 +1213,9 @@
 	<Damage_To_Armor_Mod> DamageL_AntiVehiclePulseWave, ArmourG_SpeederHeavy, 0.25 </Damage_To_Armor_Mod>
 
 	<!-- Damage Armour Reworked Matrix - Space -->
-
+	
 	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Corvette, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Frigate, 0.5 </Damage_To_Armor_Mod>
@@ -1223,16 +1223,16 @@
 	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_Capital, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ShieldS_SuperCapital, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_FighterHeavy, 0.85 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_FighterHeavy, 0.85 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Gunship, 0.85 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Corvette, 0.625 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Frigate, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_HeavyFrigate, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_Capital, 0.1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Laser, ArmourS_SuperCapital, 0.1 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_Frigate, 0.75 </Damage_To_Armor_Mod>
@@ -1240,16 +1240,16 @@
 	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_Capital, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ShieldS_SuperCapital, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_Fighter, 0.1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_FighterHeavy, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_FighterHeavy, 0.1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_Gunship, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_Corvette, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_Frigate, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_HeavyFrigate, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_Capital, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Ion, ArmourS_SuperCapital, 0.0 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Fighter, 0.75 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Gunship, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Corvette, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Frigate, 0.5 </Damage_To_Armor_Mod>
@@ -1257,16 +1257,16 @@
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_Capital, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ShieldS_SuperCapital, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_FighterHeavy, 0.8 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_FighterHeavy, 0.8 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Gunship, 0.8 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Corvette, 0.7 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Frigate, 0.6 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_HeavyFrigate, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_Capital, 0.5 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_SuperCapital, 0.25 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageS_Turbolaser, ArmourS_SuperCapital, 0.25 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
@@ -1274,16 +1274,16 @@
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Fighter, 0.1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_FighterHeavy, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_FighterHeavy, 0.1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Gunship, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Corvette, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Frigate, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_HeavyFrigate, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_Capital, 0.0 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_SuperCapital, 0.0 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageS_TurboIon, ArmourS_SuperCapital, 0.0 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_Fighter, 0.75 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_Gunship, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_Corvette, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_Frigate, 0.5 </Damage_To_Armor_Mod>
@@ -1291,16 +1291,16 @@
 	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_Capital, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ShieldS_SuperCapital, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_HeavyFrigate, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_Capital, 0.625 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_SuperCapital, 1.0 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageS_Concussion, ArmourS_SuperCapital, 1.0 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_Gunship, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_Corvette, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_Frigate, 0.5 </Damage_To_Armor_Mod>
@@ -1308,16 +1308,16 @@
 	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_Capital, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ShieldS_SuperCapital, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_FighterHeavy, 0.75 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_Gunship, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_Corvette, 0.5 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_Frigate, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_HeavyFrigate, 0.25 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_Capital, 0.125 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Flechette, ArmourS_SuperCapital, 0.125 </Damage_To_Armor_Mod>
-
+	
 	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
@@ -1325,7 +1325,7 @@
 	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Proton, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_Gunship, 0.9 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_Corvette, 0.9 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_Frigate, 0.8 </Damage_To_Armor_Mod>
@@ -1334,9 +1334,9 @@
 	<Damage_To_Armor_Mod> DamageS_Proton, ArmourS_SuperCapital, 0.75 </Damage_To_Armor_Mod>
 
 	<!-- Proton bomb is a mix of proton and conc but excludes fighters for splash purposes -->
-
+	
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_Fighter, 0.0 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_FighterHeavy, 0.0 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_FighterHeavy, 0.0 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_Gunship, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_Corvette, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_Frigate, 0.75 </Damage_To_Armor_Mod>
@@ -1344,16 +1344,16 @@
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_Capital, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ShieldS_SuperCapital, 0.75 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_Fighter, 0.0 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_FighterHeavy, 0.0 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_FighterHeavy, 0.0 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_SuperCapital, 1.0 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageS_ProtonBomb, ArmourS_SuperCapital, 1.0 </Damage_To_Armor_Mod>	
+	
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
@@ -1361,7 +1361,7 @@
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
@@ -1370,7 +1370,7 @@
 	<Damage_To_Armor_Mod> DamageS_HypervelocityGun, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
 
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
@@ -1378,7 +1378,7 @@
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Fighter, 0.1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_FighterHeavy, 0.1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_FighterHeavy, 0.1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Gunship, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Corvette, 0.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_Frigate, 0.0 </Damage_To_Armor_Mod>
@@ -1387,7 +1387,7 @@
 	<Damage_To_Armor_Mod> DamageS_GTSIon, ArmourS_SuperCapital, 0.0 </Damage_To_Armor_Mod>
 
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Frigate, 1 </Damage_To_Armor_Mod>
@@ -1395,14 +1395,14 @@
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_Capital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ShieldS_SuperCapital, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Fighter, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_FighterHeavy, 1 </Damage_To_Armor_Mod>	
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Gunship, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Corvette, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Frigate, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_HeavyFrigate, 1 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_Capital, 1 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>
-
+	<Damage_To_Armor_Mod> DamageS_SeismicCharge, ArmourS_SuperCapital, 1 </Damage_To_Armor_Mod>	
+	
 	<!-- DAMAGE vs. ARMOR Matrix -->
 
 	<!-- Default Damage Type -->
@@ -1424,7 +1424,7 @@
 	<Damage_To_Armor_Mod> Damage_Asteroid, ArmourS_Frigate, 0.8 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Asteroid, ArmourS_HeavyFrigate, 0.7 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> Damage_Asteroid, ArmourS_Capital, 0.6 </Damage_To_Armor_Mod>
-	<Damage_To_Armor_Mod> Damage_Asteroid, ArmourS_SuperCapital, 0.5 </Damage_To_Armor_Mod>
+	<Damage_To_Armor_Mod> Damage_Asteroid, ArmourS_SuperCapital, 0.5 </Damage_To_Armor_Mod>	
 
 	<!-- Rancor claw Damage Type - Ground Only -->
 	<Damage_To_Armor_Mod> Damage_Rancor, Armor_Default, 1 </Damage_To_Armor_Mod>
@@ -1451,7 +1451,7 @@
 	<!--                                    -->
 
 	<!-- Menu Battle Maps info -->
-
+	
 	<Demo_Attract_Maps> End_Demo_Attract_Kaliida_Nebula.ted, End_Demo_Attract_Christophsis.ted, End_Demo_Attract_Muunilinst.ted, End_Demo_Attract_Geonosis.ted, End_Demo_Attract_Rishi.ted </Demo_Attract_Maps>
 	<Demo_Attract_Start_Timeout_Seconds>7200</Demo_Attract_Start_Timeout_Seconds>
 	<Demo_Attract_Map_Cycle_Delay_Seconds> 90, 90, 90, 90, 90 </Demo_Attract_Map_Cycle_Delay_Seconds>
@@ -1692,10 +1692,10 @@
 		Hardcell_Tender, 					Data\ShipNames\Hardcell.txt,
 		Kuari_Princess_Liner, 				Data\ShipNames\Cruise_Liner.txt,
 		Liberty_Liner, 			Data\ShipNames\Cruise_Liner.txt,
-		Home_One_Type_Liner, 				Data\ShipNames\Cruise_Liner.txt,
+		Home_One_Type_Liner, 				Data\ShipNames\Cruise_Liner.txt,		
 		Home_One_Type_Defender, 			Data\ShipNames\home_one.txt,		
 		Tagge_Battlecruiser, 		Data\ShipNames\Tagge.txt,
-		Skirmish_Marauder_Cruiser, 			Data\ShipNames\Marauder_Cruiser.txt,
+		Skirmish_Marauder_Cruiser, 			Data\ShipNames\Marauder_Cruiser.txt,		
 		Skirmish_Hardcell_Tender, 			Data\ShipNames\Hardcell.txt,
 		Skirmish_CR90, 						Data\ShipNames\Corellian_Corvette.txt,
 		Skirmish_DP20, 						Data\ShipNames\Corellian_Gunboat.txt,
@@ -1754,7 +1754,7 @@
 		Charger_C70, 						Data\ShipNames\C70.txt,
 		Pelta_Assault, 						Data\ShipNames\Pelta_assault.txt,
 		Pelta_Support, 						Data\ShipNames\Pelta_support.txt,
-		Victory_I_Frigate, 					Data\ShipNames\victory_frigate.txt,
+		Victory_I_Frigate, 					Data\ShipNames\victory_frigate.txt,		
 		Galleon, 							Data\ShipNames\Galleon.txt,
 		Customs_Corvette, 					Data\ShipNames\Customs_Corvette.txt,
 		Space_ARC_Cruiser, 					Data\ShipNames\Space_ARC.txt,
@@ -1764,12 +1764,12 @@
 		Super_Transport_VII_Missile, 		Data\ShipNames\Super_Transport_Missile_Barge.txt,
 		Super_Transport_XI, 				Data\ShipNames\Super_Transport_XI.txt,
 		Super_Transport_XI_Missile, 		Data\ShipNames\Super_Transport_Missile_Barge.txt,
-		Super_Transport_XI_Modified, 		Data\ShipNames\Super_Transport_XI.txt,
-		Storm_Fleet_Destroyer, 				Data\ShipNames\Storm_Fleet.txt
-		Sabaoth_Frigate, 					Data\ShipNames\Sabaoth_Frigate.txt,
+		Super_Transport_XI_Modified, 		Data\ShipNames\Super_Transport_XI.txt,		
+		Storm_Fleet_Destroyer, 				Data\ShipNames\Storm_Fleet.txt		
+		Sabaoth_Frigate, 					Data\ShipNames\Sabaoth_Frigate.txt,		
 		Sabaoth_Frigate_Spy,				Data\ShipNames\Sabaoth_Frigate.txt,
-		Sabaoth_Hex_Deployer, 				Data\ShipNames\Sabaoth_Hex_Deployer.txt,
-		Sabaoth_Destroyer, 					Data\ShipNames\Sabaoth_Destroyer.txt,
+		Sabaoth_Hex_Deployer, 				Data\ShipNames\Sabaoth_Hex_Deployer.txt,		
+		Sabaoth_Destroyer, 					Data\ShipNames\Sabaoth_Destroyer.txt,		
 		Class_C_Frigate, 					Data\ShipNames\Class_C_Escort.txt,
 		Class_C_Support, 					Data\ShipNames\Class_C.txt,
 		Starbolt, 						Data\ShipNames\Starbolt.txt,
@@ -1794,7 +1794,7 @@
 		Skirmish_Lucrehulk_Battleship, 		Data\ShipNames\Lucrehulk_Battleship.txt,
 		Skirmish_Lucrehulk_Carrier_Control, Data\ShipNames\Lucrehulk.txt,
 		Skirmish_Lucrehulk_Core_Destroyer, 	Data\ShipNames\Core_Ship.txt,
-
+		
 		Skirmish_Secutor_Star_Destroyer, 					Data\ShipNames\Secutor.txt,
 		Skirmish_Neutron_Star, 				Data\ShipNames\Neutron_Star.txt,
 		Skirmish_Arquitens, 				Data\ShipNames\Arquitens.txt,
@@ -1804,12 +1804,12 @@
 		Skirmish_Munificent, 				Data\ShipNames\Munificent.txt,
 		Skirmish_LAC, 						Data\ShipNames\LAC.txt,
 		Skirmish_Pelta, 					Data\ShipNames\Pelta_assault.txt,
-		Skirmish_Pelta_Support, 			Data\ShipNames\Pelta_support.txt,
+		Skirmish_Pelta_Support, 			Data\ShipNames\Pelta_support.txt,		
 		Skirmish_Class_C_Frigate, 			Data\ShipNames\Class_C_Escort.txt,
-		Skirmish_Class_C_Support, 			Data\ShipNames\Class_C.txt,
+		Skirmish_Class_C_Support, 			Data\ShipNames\Class_C.txt,	
 		Skirmish_Gladiator_I, 		Data\ShipNames\Gladiator.txt,
 		Skirmish_Imperial_I_Frigate,	Data\ShipNames\Class_I.txt,
-		Skirmish_Victory_I_Frigate, 		Data\ShipNames\victory_frigate.txt,
+		Skirmish_Victory_I_Frigate, 		Data\ShipNames\victory_frigate.txt,				
 		Skirmish_Starbolt, 					Data\ShipNames\Starbolt.txt,
 		Skirmish_CEC_Light_Cruiser,				Data\ShipNames\Starbolt.txt,
 	</ShipNameTextFiles>
@@ -1831,7 +1831,7 @@
 		Bulwark_II, 						Data\ShipNames\Bulwark_II.txt,
 		Diamond_Frigate, 					Data\ShipNames\Diamond.txt,
 		Geonosian_Cruiser, 					Data\ShipNames\Geonosian.txt,
-		Geonosian_Cruiser_Influence, 		Data\ShipNames\Geonosian.txt,
+		Geonosian_Cruiser_Influence, 		Data\ShipNames\Geonosian.txt,		
 		C9979_Carrier, 						Data\ShipNames\C9979.txt,
 		C9979_Carrier_Subfaction, 			Data\ShipNames\C9979.txt,
 		Subjugator, 						Data\ShipNames\Subjugator.txt,
@@ -1857,15 +1857,15 @@
 		Skirmish_Auxilia, 					Data\ShipNames\Auxilia.txt,
 		Skirmish_Subjugator, 				Data\ShipNames\Subjugator.txt,
 		Skirmish_Munifex, 					Data\ShipNames\Munifex.txt,
-		Skirmish_Lupus_Missile_Frigate,		Data\ShipNames\Lupus.txt,
-		Skirmish_Sabaoth_Frigate, 			Data\ShipNames\Sabaoth_Frigate.txt,
-		Skirmish_Sabaoth_Hex_Deployer, 		Data\ShipNames\Sabaoth_Hex_Deployer.txt,
+		Skirmish_Lupus_Missile_Frigate,		Data\ShipNames\Lupus.txt,		
+		Skirmish_Sabaoth_Frigate, 			Data\ShipNames\Sabaoth_Frigate.txt,		
+		Skirmish_Sabaoth_Hex_Deployer, 		Data\ShipNames\Sabaoth_Hex_Deployer.txt,		
 		Skirmish_Sabaoth_Destroyer, 		Data\ShipNames\Sabaoth_Destroyer.txt,
 		Skirmish_CIS_PDF_DHC,	Data\ShipNames\Dreadnaught_Republic.txt,
 		Skirmish_CIS_DHC, 			Data\ShipNames\Dreadnaught_Republic.txt,
 	</ShipNameTextFiles>
-
-	<!-- Hutt Names -->
+	
+	<!-- Hutt Names -->	
 	<ShipNameTextFiles>
 		Light_Minstrel_Yacht, 				Data\ShipNames\Miniminstrel.txt,
 		Heavy_Minstrel_Yacht, 				Data\ShipNames\Minstrel.txt,
@@ -1882,7 +1882,7 @@
 		Vontor_Destroyer, 					Data\ShipNames\Vontor.txt,
 		Voracious_Carrier, 					Data\ShipNames\Voracious.txt,
 		Dorbulla_Warship, 					Data\ShipNames\Dorbulla.txt,
-
+		
 		Skirmish_Light_Minstrel_Yacht, 		Data\ShipNames\Miniminstrel.txt,
 		Skirmish_Heavy_Minstrel_Yacht, 		Data\ShipNames\Minstrel.txt,
 		Skirmish_Kaloth_Battlecruiser, 		Data\ShipNames\Kaloth.txt,
@@ -1917,7 +1917,7 @@
 		CR25_Landing_Craft_Heavy,				Data\ShipNames\Dropship_Heavy.txt,
 		CR25_Landing_Craft_Light_Vehicles,		Data\ShipNames\Dropship_Light_Vehicles.txt,
 		CR25_Landing_Craft_Tanks,				Data\ShipNames\Dropship_Tanks.txt,
-
+		
 		Kappa_Shuttle_Landing_Craft_Clones,		Data\ShipNames\Dropship_Clones.txt,
 		Kappa_Shuttle_Landing_Craft_Troops,		Data\ShipNames\Dropship_Troops.txt,
 
@@ -1951,7 +1951,7 @@
 
 		Gozanti_Heavy_Transport_Landing_Craft_Tanks,				Data\ShipNames\Dropship_Tanks.txt,
 		Gozanti_Heavy_Transport_Landing_Craft_Heavy,				Data\ShipNames\Dropship_Heavy.txt,
-
+		
 		Komrk_Landing_Craft_Commando,		Data\ShipNames\Dropship_Mando.txt,
 
 		RZ52_Infantry_Shuttle_Light_Vehicles,		Data\ShipNames\Dropship_Light_Vehicles.txt,
@@ -1972,12 +1972,12 @@
 		MAF_Landing_Craft_MAF,					Data\ShipNames\Dropship_Air.txt,
 		HMP_Landing_Craft_HMP,					Data\ShipNames\Dropship_Air.txt,
 	</ShipNameTextFiles>
-
+	
 	<!-- Commander Names -->
 	<ShipNameTextFiles>
 		Commander_Tier_III_Venator_Star_Destroyer,				Data\ShipNames\Cadet_IR_Space.txt,
-		Gallofree_Transport_Commander,							Data\ShipNames\Cadet_NR_Ground.txt,
-
+		Gallofree_Transport_Commander,			Data\ShipNames\Cadet_NR_Ground.txt,
+		
 		Commander_Tier_I_Arquitens,								Data\ShipNames\Cadet_IR_Space.txt,
 		Commander_Tier_I_PDF_DHC,								Data\ShipNames\Cadet_IR_Space.txt,
 		Commander_Tier_I_Rep_DHC,								Data\ShipNames\Cadet_IR_Space.txt,
@@ -2019,12 +2019,12 @@
 		Commander_Tier_IV_Vontor_Destroyer,						Data\ShipNames\Cadet_Hutt_Space.txt,
 
 		Kappa_Shuttle_Landing_Craft_Army_Commander,	Data\ShipNames\Cadet_Rep_Ground.txt,
-		CR20_Landing_Craft_Commander,				Data\ShipNames\Cadet_Rep_Ground.txt,
-		CR20_Landing_Craft_Clone_Commander,			Data\ShipNames\Cadet_Clone.txt,
-		Nu_Shuttle_Landing_Craft_Commander,			Data\ShipNames\Cadet_Clone.txt,
-		Rho_Shuttle_Landing_Craft_Commander,		Data\ShipNames\Cadet_Clone.txt,
+		CR20_Landing_Craft_Commander,			Data\ShipNames\Cadet_Rep_Ground.txt,
+		CR20_Landing_Craft_Clone_Commander,		Data\ShipNames\Cadet_Clone.txt,
+		Nu_Shuttle_Landing_Craft_Commander,		Data\ShipNames\Cadet_Clone.txt,
+		Rho_Shuttle_Landing_Craft_Commander,	Data\ShipNames\Cadet_Clone.txt,
 
-		Ground_Tactical_Droid_Landing_Craft,		Data\ShipNames\Cadet_Tactical_Droid.txt,
+		Ground_Tactical_Droid_Landing_Craft,	Data\ShipNames\Cadet_Tactical_Droid.txt,
 		CIS_Sheathipede_Landing_Craft_Commander,	Data\ShipNames\Cadet_Tactical_Droid.txt,
 		Stock_Sheathipede_Landing_Craft_Commander,	Data\ShipNames\Cadet_Tactical_Droid.txt,
 	</ShipNameTextFiles>
@@ -2034,14 +2034,14 @@
 
 	<!-- Hijacked to show what planets can support, number in list corresponds to IDC_PA_ICON# and IDC_PA_TEXT# in Guidialogs -->
     <Planet_Ability_Icon_Names>
-		i_pa_base_stealth_ground.tga,
-		i_pa_base_stealth_space.tga,
-		i_pa_black_market_influences.tga,
-		i_pa_combat_armor_galactic.tga,
-		i_pa_enhanced_fighter_shields.tga,
-		i_pa_enhanced_t4b_damage.tga,
-		i_pa_galactic_production_boost.tga,
-		i_pa_high_credit_value.tga,
+        i_pa_base_stealth_ground.tga,
+        i_pa_base_stealth_space.tga,
+        i_pa_black_market_influences.tga,
+        i_pa_combat_armor_galactic.tga,
+        i_pa_enhanced_fighter_shields.tga,
+        i_pa_enhanced_t4b_damage.tga,
+        i_pa_galactic_production_boost.tga,
+        i_pa_high_credit_value.tga,
 		i_pa_improved_atat_reactors.tga,	<!-- Supports Sith Temple -->
 		i_pa_improved_treads.tga,			<!-- Supports Jedi Temple -->
 		i_pa_improved_weapons.tga,			<!-- Supports Star Forge -->
@@ -2050,42 +2050,42 @@
 		i_pa_restricted_units.tga,			<!-- Supports Mining -->
 		i_pa_spy_network.tga,				<!-- Supports Trade hub -->
 		i_pa_stamina_boost.tga,				<!-- Supports Officer Academy -->
-		i_pa_tactical_auto_damage.tga,
-		i_pa_tactical_heal_Infantry.tga
-		i_pa_tactical_cloning.tga
-		i_pa_tactical_secure.tga
-		i_pa_tactical_research.tga
-		i_pa_tactical_damage.tga
-		i_pa_tactical_environment.tga
-		i_pa_tactical_shields.tga
-		i_pa_tactical_force.tga
+        i_pa_tactical_auto_damage.tga,
+        i_pa_tactical_heal_Infantry.tga
+	i_pa_tactical_cloning.tga
+	i_pa_tactical_secure.tga
+	i_pa_tactical_research.tga
+	i_pa_tactical_damage.tga
+	i_pa_tactical_environment.tga
+	i_pa_tactical_shields.tga
+	i_pa_tactical_force.tga
     </Planet_Ability_Icon_Names>
     <Planet_Ability_Text_IDs>
-		TEXT_PA_BASE_STEALTH_GROUND,
-		TEXT_PA_BASE_STEALTH_SPACE,
-		TEXT_PA_BLACK_MARKET_INFLUENCES,
-		TEXT_PA_COMBAT_ARMOR_GALACTIC,
-		TEXT_PA_ENHANCED_FIGHTER_SHIELDS,
-		TEXT_PA_ENHANCED_T4B_DAMAGE,
-		TEXT_PA_GALACTIC_PRODUCTION_BOOST,
-		TEXT_PA_HIGH_CREDIT_VALUE,
-		TEXT_PA_IMPROVED_ATAT_REACTORS,
-		TEXT_PA_IMPROVED_TREADS,
-		TEXT_PA_IMPROVED_WEAPONS,
-		TEXT_PA_LIGHT_ARMOR_PLATING,
-		TEXT_PA_BOUNTY,
-		TEXT_PA_RESTRICTED_UNITS,
-		TEXT_PA_SPY_NETWORK,
-		TEXT_PA_STAMINA_BOOST,
-		TEXT_PA_TACTICAL_AUTO_DAMAGE,
-		TEXT_PA_TACTICAL_HEAL_INFANTRY
-		TEXT_PA_CLONING_VATS
-		TEXT_PA_SECURE_AREA
-		TEXT_PA_RESEARCH_ADVANCES
-		TEXT_PA_DAMAGE_BONUS
-		TEXT_PA_ENVIRONMENTAL_TRAINING
-		TEXT_PA_ADVANCED_SHIELDS
-		TEXT_PA_FORCE_NEGATION
+        TEXT_PA_BASE_STEALTH_GROUND,
+        TEXT_PA_BASE_STEALTH_SPACE,
+        TEXT_PA_BLACK_MARKET_INFLUENCES,
+        TEXT_PA_COMBAT_ARMOR_GALACTIC,
+        TEXT_PA_ENHANCED_FIGHTER_SHIELDS,
+        TEXT_PA_ENHANCED_T4B_DAMAGE,
+        TEXT_PA_GALACTIC_PRODUCTION_BOOST,
+        TEXT_PA_HIGH_CREDIT_VALUE,
+        TEXT_PA_IMPROVED_ATAT_REACTORS,
+        TEXT_PA_IMPROVED_TREADS,
+        TEXT_PA_IMPROVED_WEAPONS,
+        TEXT_PA_LIGHT_ARMOR_PLATING,
+        TEXT_PA_BOUNTY,
+        TEXT_PA_RESTRICTED_UNITS,
+        TEXT_PA_SPY_NETWORK,
+        TEXT_PA_STAMINA_BOOST,
+        TEXT_PA_TACTICAL_AUTO_DAMAGE,
+        TEXT_PA_TACTICAL_HEAL_INFANTRY
+	TEXT_PA_CLONING_VATS
+	TEXT_PA_SECURE_AREA
+	TEXT_PA_RESEARCH_ADVANCES
+	TEXT_PA_DAMAGE_BONUS
+	TEXT_PA_ENVIRONMENTAL_TRAINING
+	TEXT_PA_ADVANCED_SHIELDS
+	TEXT_PA_FORCE_NEGATION
      </Planet_Ability_Text_IDs>
     <Planet_Ability_RGBs>
         0, 255, 100,
@@ -2158,7 +2158,7 @@
 	<Bombardment_Offset>0 0 600</Bombardment_Offset>
 	<Bombardment_Distribution> 0, 3, 1, 2, 3, 2, 0, 1, 2, 1, 3, 0, 1, 2, 0, 3, 0, 2, 1, 3, 3, 2, 1, 0 </Bombardment_Distribution>
 
-	<Override_Death_Persistence_Duration>30.0</Override_Death_Persistence_Duration>
+	<Override_Death_Persistence_Duration>1800.0</Override_Death_Persistence_Duration>
 
     <Auto_Resolve_Tactical_Multiplier>1.0</Auto_Resolve_Tactical_Multiplier>
 
@@ -2169,18 +2169,18 @@
 
    <Sensor_Jamming_Time>.5</Sensor_Jamming_Time>
 
-	<Quickmatch_Map_Exclusion_List>
-		_MP_Land_Kessel.ted,
-		_MP_Land_Geonosis.ted,
-		_MP_Land_Dantooine.ted,
-		_MP_Land_Hypori.ted,
-		_MP_Land_Mandalore.ted,
-		_MP_Space_Shola.ted,
-		_MP_Space_Yavin.ted,
-		_MP_Space_Hoth.ted,
-		_MP_Space_Felucia.ted,
-		_MP_Space_Saleucami.ted,
-	</Quickmatch_Map_Exclusion_List>
+		<Quickmatch_Map_Exclusion_List>
+			_MP_Land_Kessel.ted,
+			_MP_Land_Geonosis.ted,
+			_MP_Land_Dantooine.ted,
+			_MP_Land_Hypori.ted,
+			_MP_Land_Mandalore.ted,
+			_MP_Space_Shola.ted,
+			_MP_Space_Yavin.ted,
+			_MP_Space_Hoth.ted,
+			_MP_Space_Felucia.ted,
+			_MP_Space_Saleucami.ted,
+		</Quickmatch_Map_Exclusion_List>
 
     <First_Strike_Extra_Damage_Percent>1.5</First_Strike_Extra_Damage_Percent>
     <First_Strike_Particle>First_Strike_Particle_Effect</First_Strike_Particle>
@@ -2221,7 +2221,7 @@
 	<Default_Bounty_By_Category_MP>InfantryHero, 250</Default_Bounty_By_Category_MP>
 	<Default_Bounty_By_Category_MP>VehicleHero, 250</Default_Bounty_By_Category_MP>
 
-	<Corruption_Hyperspace_Bonus> 1.0 </Corruption_Hyperspace_Bonus>
+   <Corruption_Hyperspace_Bonus> 1.0 </Corruption_Hyperspace_Bonus>
 
 	<!-- The following corruption type-related entries need to be listed in the following order:
 		0.	Corruption_Intimidation
@@ -2233,11 +2233,11 @@
 		6. Corruption_Black_Market
 		7. Corruption_Bonded_Citizens
 	-->
-	<Corruption_Choice_Icon_Name/>
+   <Corruption_Choice_Icon_Name/>
 	<Corruption_Choice_Income_Percentage> 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 </Corruption_Choice_Income_Percentage>
 	<Bribery_Fleet_Reveal_Range> 75.0 </Bribery_Fleet_Reveal_Range>
 
-	<Corruption_Planet_Icon>
+   <Corruption_Planet_Icon>
 		i_button_corruption_Assassination_g.tga
 		i_button_corruption_Piracy_g.tga
 		i_button_corruption_Kidnapping_g.tga
@@ -2246,9 +2246,9 @@
 		i_button_corruption_Bribery_g.tga
 		i_button_corruption_Black_Market_g.tga
 		i_button_corruption_Slavery_g.tga
-		i_icon_corruption_info.tga
-	</Corruption_Planet_Icon>
-	<Corruption_Planet_Icon_Encyclopedia_Name>
+      i_icon_corruption_info.tga
+   </Corruption_Planet_Icon>
+   <Corruption_Planet_Icon_Encyclopedia_Name>
 		TEXT_CORRUPTION_ASSASSINATION
 		TEXT_CORRUPTION_PIRACY
 		TEXT_CORRUPTION_KIDNAPPING
@@ -2257,8 +2257,8 @@
 		TEXT_CORRUPTION_BRIBERY
 		TEXT_CORRUPTION_BLACK_MARKET
 		TEXT_CORRUPTION_SLAVERY
-	</Corruption_Planet_Icon_Encyclopedia_Name>
-	<Corruption_Planet_Icon_Encyclopedia_Desc>
+   </Corruption_Planet_Icon_Encyclopedia_Name>
+   <Corruption_Planet_Icon_Encyclopedia_Desc>
 		TEXT_CORRUPTION_ASSASSINATION_ENCYCLOPEDIA
 		TEXT_CORRUPTION_PIRACY_ENCYCLOPEDIA
 		TEXT_CORRUPTION_KIDNAPPING_ENCYCLOPEDIA
@@ -2267,7 +2267,7 @@
 		TEXT_CORRUPTION_BRIBERY_ENCYCLOPEDIA
 		TEXT_CORRUPTION_BLACK_MARKET_ENCYCLOPEDIA
 		TEXT_CORRUPTION_SLAVERY_ENCYCLOPEDIA
-	</Corruption_Planet_Icon_Encyclopedia_Desc>
+   </Corruption_Planet_Icon_Encyclopedia_Desc>
 
    <Corruption_Encyclopedia_Backdrop> i_corruption_encyclopedia_backdrop.tga </Corruption_Encyclopedia_Backdrop>
    <Corruption_Encyclopedia_Header> i_corruption_encyclopedia_header.tga </Corruption_Encyclopedia_Header>

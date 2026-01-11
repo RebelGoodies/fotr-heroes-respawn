@@ -9,6 +9,7 @@ return {
 	"Obi_Wan_Delta_Team", "Obi_Wan_Eta_Team",
 	"Anakin_Delta_Team", "Anakin_Eta_Team",
 	"Ahsoka_Delta_Team", "Ahsoka_Eta_Team",
+	"Anakin_ObiWan_Master_Team",
 	"Anakin_Ahsoka_Twilight_Team",
 	"Yoda_Delta_Team", "Yoda_Eta_Team",
 	"Mace_Windu_Delta_Team", "Mace_Windu_Eta_Team",
@@ -23,6 +24,12 @@ return {
 	"Rahm_Kota_Team",
 	"Nejaa_Halcyon_Team",
 	"Knol_Vennari_Team",
+	
+	--Future proofing/support for Custom heroes
+	"Cin_Drallig_Team",
+	"Serra_Keto_Team",
+	"Jocasta_Nu_Team",
+	"Laddinare_Torbin_Team",
 	
 	--Other
 	"Padme_Amidala_Team",

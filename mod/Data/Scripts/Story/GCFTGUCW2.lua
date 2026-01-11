@@ -13,6 +13,7 @@ end
 function Initialize(message)
     if message == OnEnter then
 		crossplot:galactic()
+		--[[
 		p_Republic = Find_Player("Empire")
 		if p_Republic.Is_Human() then
 			crossplot:publish("TIMING_ISSUE", 2, 1)
@@ -23,7 +24,7 @@ function Initialize(message)
 			crossplot:publish("COMMAND_STAFF_EXIT", {"Grumby"}, 1)
 			crossplot:publish("COMMAND_STAFF_EXIT", {"Seerdon"}, 2)
 		end
-		
+		--]]
 		if GlobalValue.Get("CURRENT_ERA") > 1 then
 			crossplot:publish("VENATOR_HEROES", "empty")
 		end

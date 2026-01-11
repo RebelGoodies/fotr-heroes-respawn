@@ -1,21 +1,21 @@
 return {
 	["EMPIRE"] = {
-	["CORUSCANT"] = {"Pestage_Team"},
-	["ALSAKAN"] = {"Mace_Windu_Delta_Team"},
-	["KUAT"] = {"Plo_Koon_Delta_Team", "Seerdon_Invincible"},
-	["ALDERAAN"] = {"Rom_Mohc_Team"},
-	["ORD_MANTELL"] = {"Dallin_Kebir"},
-	["ROTHANA"] = {"Solomahal_Team", "Maarisa_Captor"},
-	["TIBRIN"] = {"Rahm_Kota_Team", "Grumby_Invincible"}
+		["CORUSCANT"] = {"Pestage_Team"},
+		["ALSAKAN"] = {"Mace_Windu_Delta_Team"},
+		["KUAT"] = {"Plo_Koon_Delta_Team", "Seerdon_Invincible"},
+		["ALDERAAN"] = {"Rom_Mohc_Team"},
+		["ORD_MANTELL"] = {"Dallin_Kebir"},
+		["ROTHANA"] = {"Solomahal_Team", "Maarisa_Captor"},
+		["TIBRIN"] = {"Rahm_Kota_Team", "Grumby_Invincible"}
 	},
 	["REBEL"] = {
-	["RAXUS_SECOND"] = {"Lucid_Voice", "SevRance_Team"},
-	["YAGDHUL"] = {"Durge_Team"},
-	["YAVIN"] = {"Dooku_Team", "Cavik_Toth_Reaver"},
-	--["SERENNO"] = {"Grievous_Team_Recusant", "Colicoid_Swarm", "Sora_Bulq_Team"},
-	["QUELL"] = {"TF1726_Munificent"},
-	["CHRISTOPHSIS"] = {"Whorm_Team", "Trench_Invincible"},
-	["SULLUST"] = {"Gunray_Team"}
+		["RAXUS_SECOND"] = {"Lucid_Voice", "SevRance_Team"},
+		["YAGDHUL"] = {"Durge_Team"},
+		["YAVIN"] = {"Dooku_Team", "Cavik_Toth_Reaver"},
+		--["SERENNO"] = {"Grievous_Team_Recusant", "Colicoid_Swarm", "Sora_Bulq_Team"},
+		["QUELL"] = {"TF1726_Munificent"},
+		["CHRISTOPHSIS"] = {"Whorm_Team", "Trench_Invincible"},
+		["SULLUST"] = {"Gunray_Team"}
 	},
 	["HUTT_CARTELS"] = {
 		["GAMORR"]  = {
@@ -41,6 +41,6 @@ return {
         }
 	},
 	["INDEPENDENT_FORCES"] = {
-	["FLORRUM"] = {"Hondo_Ohnaka_Team"}
+		["FLORRUM"] = {"Hondo_Ohnaka_Team"}
 	}
 }

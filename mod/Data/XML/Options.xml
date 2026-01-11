@@ -129,4 +129,87 @@
 		<Encyclopedia_Text>TEXT_TOOLTIP_CHEAT_VICTORY</Encyclopedia_Text>
 		<Icon_Name>i_button_cheat_victory.tga</Icon_Name>
 	</DummyStructure>
+
+	<!-- Custom Options for Heroes Respawn submod -->
+
+	<DummyStructure Name="Option_Increase_Rep_Staff">
+		<Variant_Of_Existing_Type>Template_Option</Variant_Of_Existing_Type>
+
+		<Text_ID>Increase All Staff by One</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+		Get additional command staff slots:
+		+2 Admirals/Captains
+		+1 Sector Army Commander
+		+1 Jedi
+		+1 Army Officer
+		+1 Clone Officer
+		+1 Clone Commando
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_OPTIONS </Encyclopedia_Unit_Class>
+		<Icon_Name>I_MULTIPLAY_REPUBLIC.tga</Icon_Name>
+
+		<GUI_Row>1</GUI_Row>
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Cost_Credits>6</Build_Cost_Credits>
+		<Build_Limit_Lifetime_Per_Player>12</Build_Limit_Lifetime_Per_Player>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Respawn_On">
+		<Variant_Of_Existing_Type>Template_Option</Variant_Of_Existing_Type>
+		
+		<Text_ID>Enable Human Hero Respawns</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+		Allow your own heroes to respawn. Timers will be set
+		when your heroes die.
+		- [Can be deactivated]
+		</Encyclopedia_Text>
+		<Icon_Name>mini_map_infantryhealing.tga</Icon_Name>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_Respawn_Off">
+		<Variant_Of_Existing_Type>Template_Option</Variant_Of_Existing_Type>
+		
+		<Text_ID>Disable Human Hero Respawns</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+		Prevent your own heroes from respawning. Timers will
+		NOT be set when your heroes die.
+		- [Can be reactivated]
+		</Encyclopedia_Text>
+		<Icon_Name>i_sa_bl_disruptor.tga</Icon_Name>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_AI_Respawn_On">
+		<Variant_Of_Existing_Type>Template_Option</Variant_Of_Existing_Type>
+		
+		<Text_ID>Enable AI Hero Respawns</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+		Allow enemy AI Heroes to respawn globally. Timers will
+		be set when their heroes die.
+		- [Can be deactivated]
+		</Encyclopedia_Text>
+		<Icon_Name>mini_map_infantryhealing.tga</Icon_Name>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
+	<DummyStructure Name="Option_AI_Respawn_Off">
+		<Variant_Of_Existing_Type>Template_Option</Variant_Of_Existing_Type>
+		
+		<Text_ID>Disable AI Hero Respawns</Text_ID>
+		<Encyclopedia_Text> <!-- non-breaking space (U+00A0) is used -->
+		Prevent enemy AI heroes from respawning. Timers will
+		NOT be set when their heroes die.
+		- [Can be reactivated]
+		</Encyclopedia_Text>
+		<Icon_Name>i_sa_bl_proximity_mines.tga</Icon_Name>
+
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+	</DummyStructure>
+
 </Options>

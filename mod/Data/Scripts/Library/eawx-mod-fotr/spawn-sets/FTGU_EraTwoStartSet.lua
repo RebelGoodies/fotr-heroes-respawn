@@ -1,21 +1,21 @@
 return {
 	["EMPIRE"] = {
-	["CORUSCANT"] = {"Mace_Windu_Delta_Team", "Pestage_Team"},
-	["KAMINO"] = {"Delta_Squad", "Shaak_Ti_Delta_Team"},
-	["ANAXES"] = {"Tallon_Sundiver", "Geen_Team"},
-	["CARIDA"] = {"Pellaeon_Leveler", "Ozzel_Team"},
-	["RISHI"] = {"Cody_Team", "Rex_Team"},
-	["GEONOSIS"] = {"Anakin_Delta_Team", "Obi_Wan_Delta_Team", "Fordo_Team"},
-	["MON_CALAMARI"] = {"Kit_Fisto_Delta_Team"}
+		["CORUSCANT"] = {"Mace_Windu_Delta_Team", "Pestage_Team"},
+		["KAMINO"] = {"Delta_Squad", "Shaak_Ti_Delta_Team"},
+		["ANAXES"] = {"Tallon_Sundiver", "Geen_Team"},
+		["CARIDA"] = {"Pellaeon_Leveler", "Ozzel_Team"},
+		["RISHI"] = {"Cody_Team", "Rex_Team"},
+		["GEONOSIS"] = {"Anakin_Delta_Team", "Obi_Wan_Delta_Team", "Fordo_Team"},
+		["MON_CALAMARI"] = {"Kit_Fisto_Delta_Team"}
 	},
 	["REBEL"] = {
-	["RAXUS_SECOND"] = {"Dooku_Team", "SevRance_Team"},
-	["YAGDHUL"] = {"Durge_Team"},
-	["YAVIN"] = {"Ventress_Team"},
-	["SERENNO"] = {"Grievous_Team_Recusant", "Sora_Bulq_Team"},
-	["QUELL"] = {"TF1726_Munificent"},
-	["CHRISTOPHSIS"] = {"Whorm_Team", "Trench_Invincible"},
-	["SULLUST"] = {"Gunray_Team"}
+		["RAXUS_SECOND"] = {"Dooku_Team", "SevRance_Team"},
+		["YAGDHUL"] = {"Durge_Team"},
+		["YAVIN"] = {"Ventress_Team"},
+		["SERENNO"] = {"Grievous_Team_Recusant", "Sora_Bulq_Team"},
+		["QUELL"] = {"TF1726_Munificent"},
+		["CHRISTOPHSIS"] = {"Whorm_Team", "Trench_Invincible"},
+		["SULLUST"] = {"Gunray_Team"}
 	},
 	["HUTT_CARTELS"] = {
 		["GAMORR"]  = {
@@ -41,6 +41,6 @@ return {
         }
 	},
 	["INDEPENDENT_FORCES"] = {
-	["FLORRUM"] = {"Hondo_Ohnaka_Team"}
+		["FLORRUM"] = {"Hondo_Ohnaka_Team"}
 	}
 }
