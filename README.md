@@ -1,5 +1,7 @@
 **Disclaimer**: This project is not affiliated with the EaWX team.
 
+<img src="mod/Splash.png" alt="Splash image" width="128" style="float: right; margin-left: 1em; margin-bottom: 1em;">
+
 # FotR Heroes Respawn
 
 For those who love heroes!
