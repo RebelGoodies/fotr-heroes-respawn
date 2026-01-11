@@ -9,7 +9,7 @@
 --    |___|__||_____|\___/|_____|__|__|___  |_____|
 --                                    |_____|
 --*   @Author:              [TR]Jorritkarwehr
---*   @Date:                2021-03-20T01:27:01+01:00
+--*   @Date:                After 2021-03-20T01:27:01+01:00
 --*   @Project:             Imperial Civil War
 --*   @Filename:            HeroSystem.lua
 --*   @Last modified by:    Not Jorritkarwehr
@@ -104,7 +104,7 @@ function Get_Active_Heroes(init, hero_data)
 			local find_it = Find_First_Object(ship)
 			if entry.Units then
 				for units_id=1,table.getn(entry.Units[index2]) do
-					check_hero = Find_First_Object(entry.Units[index2][units_id])
+					local check_hero = Find_First_Object(entry.Units[index2][units_id])
 					if TestValid(check_hero) then
 						find_it = check_hero
 						break
@@ -123,7 +123,9 @@ function Get_Active_Heroes(init, hero_data)
 						 postfix = " [Locked]"
 					end
 					table.insert(text_list, entry[4] .. postfix)
+					--if hero_data.group_name ~= "Jedi" and hero_data.group_name ~= "Clone Officer" and hero_data.group_name ~= "Commando" then
 					hero_data.full_list[index].unit_id = index2 --Set the unit index to the version found
+					--end
 				end
 				break
 			end
@@ -134,7 +136,11 @@ function Get_Active_Heroes(init, hero_data)
 		table.insert(text_list, "OPEN")
 	end
 	for id=admiral_count+hero_data.free_hero_slots+1,hero_data.total_slots do
-		table.insert(text_list, "VACANT (requires purchase)")
+		if hero_data.group_name then --For Limitless Heroes Mod
+			table.insert(text_list, "VACANT (requires purchase)")
+		else
+			table.insert(text_list, "VACANT")
+		end
 	end
 
 	GlobalValue.Set(hero_data.global_display_list, text_list)
@@ -185,7 +191,9 @@ function Handle_Hero_Despawn(hero_tag, hero_data)
 			check_hero = Find_First_Object(hero_unit)
 		end
 		if TestValid(check_hero) or bypassflag then
+			--if hero_data.group_name ~= "Jedi" and hero_data.group_name ~= "Clone Officer" and hero_data.group_name ~= "Commando" then
 			hero_data.full_list[hero_tag].unit_id = flagship_id
+			--end
 			if not hero_entry.Units then
 				check_hero.Despawn()
 			end
@@ -193,7 +201,9 @@ function Handle_Hero_Despawn(hero_tag, hero_data)
 				if not TestValid(planet) then
 					planet = StoryUtil.FindFriendlyPlanet(hero_data.active_player)
 				end
-				SpawnList({hero_entry.required_team}, planet, hero_data.active_player, true, false)
+				if planet then
+					SpawnList({hero_entry.required_team}, planet, hero_data.active_player, true, false)
+				end
 			end
 			if not check_hero_entry(hero_tag, hero_data) then --Don't double add to list if already in it.
 				hero_data.free_hero_slots = hero_data.free_hero_slots + 1
@@ -273,32 +283,38 @@ function Handle_Hero_Killed(killed_object, owner, hero_data)
 					if killing then
 						if hero_data.total_slots > 0 then
 							if hero_data.active_player.Is_Human() then
-								hero_data.vacant_hero_slots = hero_data.vacant_hero_slots + 1
-								if hero_data.vacant_limit > 0 then
-									local assign_unit = Find_Object_Type(hero_data.extra_name)
-									hero_data.active_player.Unlock_Tech(assign_unit)
-									StoryUtil.ShowScreenText("Be more careful with our heroes, Commander. We can only replace " .. hero_data.vacant_limit .. " more such loss(es).", 5, nil, {r = 244, g = 244, b = 0})
-								else
-									if hero_data.vacant_hero_slots >= hero_data.total_slots then
-										StoryUtil.ShowScreenText("Your have spent enough lives of our heroes, Commander. There will be no more for you to spend.", 5, nil, {r = 244, g = 244, b = 0})
-									else
-										StoryUtil.ShowScreenText("We can no longer sustain these losses among our leadership, Commander. No more command positions will be opened if you lose what remains.", 5, nil, {r = 244, g = 244, b = 0})
-									end
+							--	hero_data.vacant_hero_slots = hero_data.vacant_hero_slots + 1
+							--	if hero_data.vacant_limit > 0 then
+							--		local assign_unit = Find_Object_Type(hero_data.extra_name)
+							--		hero_data.active_player.Unlock_Tech(assign_unit)
+							--		StoryUtil.ShowScreenText("Be more careful with our heroes, Commander. We can only replace " .. hero_data.vacant_limit .. " more such loss(es).", 5, nil, {r = 244, g = 244, b = 0})
+							--	else
+							--		if hero_data.vacant_hero_slots >= hero_data.total_slots then
+							--			StoryUtil.ShowScreenText("Your have spent enough lives of our heroes, Commander. There will be no more for you to spend.", 5, nil, {r = 244, g = 244, b = 0})
+							--		else
+							--			StoryUtil.ShowScreenText("We can no longer sustain these losses among our leadership, Commander. No more command positions will be opened if you lose what remains.", 5, nil, {r = 244, g = 244, b = 0})
+							--		end
+							--	end
+							--	hero_data.vacant_limit = hero_data.vacant_limit - 1
+							--	local text_list = GlobalValue.Get(hero_data.global_display_list)
+							--	for i, text in pairs(text_list) do
+							--		if text == entry[4] then
+							--			table.remove(text_list,i)
+							--			if hero_data.vacant_limit >= 0 then
+							--				table.insert(text_list, "VACANT (requires purchase)")
+							--			end
+							--			GlobalValue.Set(hero_data.global_display_list, text_list)
+							--			break
+							--		end
+							--	end
+								
+								local group_name = hero_data.group_name
+								if not group_name then
+									group_name = "staff member"
 								end
-								hero_data.vacant_limit = hero_data.vacant_limit - 1
-								local text_list = GlobalValue.Get(hero_data.global_display_list)
-								for i, text in pairs(text_list) do
-									if text == entry[4] then
-										table.remove(text_list,i)
-										if hero_data.vacant_limit >= 0 then
-											table.insert(text_list, "VACANT (requires purchase)")
-										end
-										GlobalValue.Set(hero_data.global_display_list, text_list)
-										break
-									end
-								end
+								StoryUtil.ShowScreenText("We will be short a " .. group_name .. " until " .. index .. " fully recovers.", 5, nil, {r = 244, g = 244, b = 0})
 							else
-								hero_data.free_hero_slots = hero_data.free_hero_slots + 1
+								--hero_data.free_hero_slots = hero_data.free_hero_slots + 1
 								Unlock_Hero_Options(hero_data)
 							end
 							return index
@@ -334,10 +350,14 @@ function Handle_New_Hero_Slot(hero_data)
 	if hero_data.vacant_limit >= 0 then
 		hero_data.vacant_hero_slots = hero_data.vacant_hero_slots - 1
 		hero_data.free_hero_slots = hero_data.free_hero_slots + 1
+		local group_name = hero_data.group_name
+		if not group_name then
+			group_name = "of these staff"
+		end
 		if hero_data.active_player.Is_Human() and hero_data.vacant_hero_slots > 0 then
-			StoryUtil.ShowScreenText(hero_data.vacant_hero_slots .. " more " .. hero_data.group_name .. " positions can be purchased.", 7, nil, {r = 244, g = 244, b = 0})
+			StoryUtil.ShowScreenText(hero_data.vacant_hero_slots .. " more " .. group_name .. " positions can be purchased.", 7, nil, {r = 244, g = 244, b = 0})
 		else
-			StoryUtil.ShowScreenText("The maximum " .. hero_data.group_name .. " positions have been purchased.", 7, nil, {r = 244, g = 244, b = 0})
+			StoryUtil.ShowScreenText("The maximum " .. group_name .. " positions have been purchased.", 7, nil, {r = 244, g = 244, b = 0})
 		end
 		Unlock_Hero_Options(hero_data)
 		if hero_data.vacant_hero_slots == 0 then
@@ -363,7 +383,7 @@ function Handle_Hero_Exit(hero_tag, hero_data, story_locked)
 	for flagship_id=1,table.getn(entry[3]) do
 		if entry.Units then
 			for units_id=1,table.getn(entry.Units[flagship_id]) do
-				check_hero = Find_First_Object(entry.Units[flagship_id][units_id])
+				local check_hero = Find_First_Object(entry.Units[flagship_id][units_id])
 				if TestValid(check_hero) then
 					check_hero.Despawn()
 					hero_found = true
@@ -483,10 +503,12 @@ function Show_Hero_Info(hero_data)
 	local text_list = GlobalValue.Get(hero_data.global_display_list)
 	local active_string = ""
 	for i, text in pairs(text_list) do
-		if i > 1 then
-			active_string = active_string .. ", "
+		if not (text == "OPEN" or text == "VACANT" or text == "VACANT (requires purchase)") then
+			if i > 1 then
+				active_string = active_string .. ", "
+			end
+			active_string = active_string .. text
 		end
-		active_string = active_string .. text
 	end
 	StoryUtil.ShowScreenText("Active heroes: " .. hero_data.total_slots - hero_data.vacant_hero_slots - hero_data.free_hero_slots .. "     Total slots: " .. hero_data.total_slots, 5, nil, {r = 244, g = 244, b = 0})
 	StoryUtil.ShowScreenText(active_string, 5, nil, {r = 244, g = 244, b = 0})

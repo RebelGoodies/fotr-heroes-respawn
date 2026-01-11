@@ -1,161 +1,155 @@
 <?xml version="1.0" ?>
 
 <Story>
-
-	<!--Would be too overpowered and annoying for Lucrehulk Heroes to respawn-->
 	
-	<Event Name="Tuuk_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Tuuk_Procurer</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
+	<!--******************** Event Notify Tools ********************-->
+	
+	<Event Name="Force_Respawn_Notification">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NOTIFY_FORCE_RESPAWN_HERO</Event_Param2>
+		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Remove_Tuuk">
+	<Event Name="Force_Respawn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>FORCE_RESPAWN</Reward_Type>
+		<Reward_Param1></Reward_Param1> <!-- Filled by lua -->
+		<Prereq>Force_Respawn_Notification</Prereq>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	
+	<Event Name="Remove_Hero_Notification">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>NOTIFY_REMOVE_HERO</Event_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Remove_Hero">
 		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Tuuk_Procurer</Reward_Param1>
-		<Prereq>Tuuk_Dies</Prereq>
-	</Event>
-	
-	
-	<Event Name="Tonith_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Tonith_Corpulentus</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-	</Event>
-	
-	<Event Name="Remove_Tonith">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Tonith_Corpulentus</Reward_Param1>
-		<Prereq>Tonith_Dies</Prereq>
-	</Event>
-	
-	<!-- ******************** Grievous Duplicates ******************** -->
-	<!-- ******************** Grievous Duplicates ******************** -->
-	<!-- ******************** Grievous Duplicates ******************** -->
-		
-	<Event Name="Recusant_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Grievous_Team_Recusant</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Remove_Recusant">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Grievous_Team_Recusant</Reward_Param1>
-		<Prereq>Recusant_Dies</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	
-	<Event Name="Invisible_Hand_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Grievous_Team</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Remove_Invisible_Hand">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Grievous_Team</Reward_Param1>
-		<Prereq>Invisible_Hand_Dies</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-
-	<Event Name="Malevolence_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Grievous_Team_Malevolence</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Remove_Malevolence">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Grievous_Team_Malevolence</Reward_Param1>
-		<Prereq>Malevolence_Dies</Prereq>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	
-	<Event Name="Malevolence_2_Dies">
-  		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
-  		<Event_Param1>Grievous_Team_Malevolence_2</Event_Param1>
-		<Event_Param2></Event_Param2>
-		<Event_Param3>1</Event_Param3>
-		<Perpetual>true</Perpetual>
-	</Event>
-	
-	<Event Name="Remove_Malevolence_2">
-		<Event_Type>STORY_TRIGGER</Event_Type>
-		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Grievous_Team_Malevolence_2</Reward_Param1>
-		<Prereq>Malevolence_2_Dies</Prereq>
+		<Reward_Param1></Reward_Param1> <!-- Filled by lua -->
+		<Prereq>Remove_Hero_Notification</Prereq>
 		<Perpetual>true</Perpetual>
 	</Event>
 	
 	<!--******************** Remove Duplicates ********************-->
 	
-	<Event Name="Durge_Dies_Remove">
+	<Event Name="Yularen_Resolute_Duplicate_Remove">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>DURGE_RESPAWNS</Event_Param2>
+		<Event_Param2>YULAREN_RESOLUTE_DUPLICATE</Event_Param2>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Yularen_Resolute</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Yularen_Invincible_Duplicate_Remove">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>YULAREN_INVINCIBLE_DUPLICATE</Event_Param2>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Yularen_Invincible</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Zozridor_Slayke_Carrack_Duplicate_Remove">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>ZOZRIDOR_SLAYKE_CARRACK_DUPLICATE</Event_Param2>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Zozridor_Slayke_Carrack</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Dooku_Duplicate_Remove">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>DOOKU_DUPLICATE</Event_Param2>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Dooku_Team</Reward_Param1>
+		<Perpetual>true</Perpetual>
+	</Event>
+	
+	<Event Name="Durge_Duplicate_Remove">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>DURGE_DUPLICATE</Event_Param2>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
 		<Reward_Param1>Durge_Team</Reward_Param1>
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<!--******************** Mercenaries ********************-->
-	<!--******************** Mercenaries ********************-->
-	<!--******************** Mercenaries ********************-->
+	<!--******************** Grievous Duplicates ********************-->
 	
-	<Event Name="Bossk_Dies_Remove">
+	<Event Name="Grievous_Recusant_Duplicate_Remove">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>BOSSK_TEAM_DIED</Event_Param2>
+		<Event_Param2>GRIEVOUS_TEAM_RECUSANT_DUPLICATE</Event_Param2>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Bossk_Team</Reward_Param1>
+		<Reward_Param1>GRIEVOUS_TEAM_RECUSANT</Reward_Param1>
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Remove_Dengar">
+	<Event Name="Grievous_Duplicate_Remove">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>DENGAR_TEAM_DIED</Event_Param2>
+		<Event_Param2>GRIEVOUS_TEAM_DUPLICATE</Event_Param2>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Dengar_Team</Reward_Param1>
+		<Reward_Param1>Grievous_Team</Reward_Param1>
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Remove_Faro_Argyus">
+	<Event Name="Grievous_Malevolence_Duplicate_Remove">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>FARO_ARGYUS_TEAM_DIED</Event_Param2>
+		<Event_Param2>GRIEVOUS_TEAM_MALEVOLENCE_DUPLICATE</Event_Param2>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Faro_Argyus_Team</Reward_Param1>
+		<Reward_Param1>Grievous_Team_Malevolence</Reward_Param1>
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Remove_Vazus">
+	<Event Name="Grievous_Malevolence2_Duplicate_Remove">
 		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>VAZUS_TEAM_DIED</Event_Param2>
+		<Event_Param2>GRIEVOUS_TEAM_MALEVOLENCE_2_DUPLICATE</Event_Param2>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Vazus_Team</Reward_Param1>
+		<Reward_Param1>Grievous_Team_Malevolence_2</Reward_Param1>
 		<Perpetual>true</Perpetual>
 	</Event>
 	
-	<Event Name="Remove_Shahan_Alama">
-		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
-		<Event_Param2>SHAHAN_ALAMA_TEAM_DIED</Event_Param2>
+	<!-- ******************** Trench Returns ******************** -->
+	
+	<Event Name="Trench_Dies">
+  		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>START_TRENCH_COUNTDOWN</Event_Param2>
+		<Perpetual>false</Perpetual>
+	</Event>
+
+	<Event Name="Trench_Returns_Timer">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>200</Event_Param1>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Trench_Invulnerable</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Trench_Dies</Prereq>
+		<Perpetual>false</Perpetual>
+	</Event>
+	
+	<Event Name="Trench_Duplicate_Remove">
+		<Event_Type>STORY_TRIGGER</Event_Type>
 		<Reward_Type>REMOVE_UNIT</Reward_Type>
-		<Reward_Param1>Shahan_Alama_Team</Reward_Param1>
-		<Perpetual>true</Perpetual>
+		<Reward_Param1>Trench_Invincible</Reward_Param1>
+		<Prereq>Trench_Returns_Timer</Prereq>
+		<Perpetual>false</Perpetual>
+	</Event>
+	
+	<Event Name="Trench_Returns_Speech">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_TRENCH_RETURNS</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Reward_Param3 />
+		<Reward_Param4 />
+		<Reward_Param5 />
+		<Reward_Param6 />
+		<Reward_Param7 />
+		<Reward_Param8 />
+		<Reward_Param9 />
+		<Reward_Param10>0</Reward_Param10>
+		<Prereq>Trench_Returns_Timer</Prereq>
+		<Perpetual>false</Perpetual>
 	</Event>
 
 </Story>

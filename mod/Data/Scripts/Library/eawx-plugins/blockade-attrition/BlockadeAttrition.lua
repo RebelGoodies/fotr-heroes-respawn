@@ -66,14 +66,14 @@ function BlockadeAttrition:attrition(planet)
 			
 			DebugMessage("%s -- Planet %s has %s enemy units in orbit", tostring(Script), tostring(planet_object), tostring(table.getn(orbiting_units_to_destroy)))
 			local unit_to_kill = orbiting_units_to_destroy[GameRandom(1, table.getn(orbiting_units_to_destroy))]
-
+			
 			--no gunship squadron blockade cheese
 			local relevant_unit_to_kill = get_relevant_object(unit_to_kill)
 			
 			if not TestValid(relevant_unit_to_kill) then
 				return
 			end
-	
+
 			self.blockade_attrition_unit_killed:notify(planet, relevant_unit_to_kill, relevant_unit_to_kill.Get_Owner().Get_Faction_Name())
 			
 			DebugMessage("%s -- Killing unit %s at %s", tostring(Script), tostring(relevant_unit_to_kill), tostring(planet_object))

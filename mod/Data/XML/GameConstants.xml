@@ -1200,7 +1200,7 @@
 	<Damage_To_Armor_Mod> DamageL_Plasma, ArmourG_Structure, 0.7 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Plasma, ArmourG_Speeder, 0.65 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_Plasma, ArmourG_SpeederHeavy, 0.55 </Damage_To_Armor_Mod>
-	
+
 	<Damage_To_Armor_Mod> DamageL_InfantryPulseWave, ShieldG_Infantry, 1.0 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantryPulseWave, ShieldG_LightVehicle, 0.125 </Damage_To_Armor_Mod>
 	<Damage_To_Armor_Mod> DamageL_InfantryPulseWave, ShieldG_HeavyVehicle, 0.06 </Damage_To_Armor_Mod>
@@ -2469,6 +2469,14 @@
 
 	<!-- Imperial/Warlord Names -->
 	<ShipNameTextFiles>
+		Venator_Refit_Rep,					Data\ShipNames\VenatorRefit.txt, <!--Better Vens-->
+		Venator_Assault,					Data\ShipNames\VenatorAssault.txt, <!--Better Vens-->
+		Venator_II_Class,					Data\ShipNames\VenatorII.txt, <!--Better Vens-->
+		Generic_Venerator, 					Data\ShipNames\Venerator.txt<!--Better Vens -->
+		Generic_Proclamator, 				Data\ShipNames\Proclamator.txt<!--Better Vens -->
+		Rothana_Heavy_Transport, 			Data\ShipNames\RHT.txt<!--Better Vens -->
+		Prototype_Imperator,				Data\ShipNames\ProtoImperator.txt,<!--Better Vens -->
+		Generic_Tempest,					Data\ShipNames\TempestRep.txt,<!--Better Vens -->
 		Generic_Star_Destroyer, 			Data\ShipNames\Star_Destroyer.txt,
 		Generic_Acclamator_Assault_Ship_I, 	Data\ShipNames\acclamator_I.txt,
 		Generic_Acclamator_Assault_Ship_II, Data\ShipNames\acclamator_II.txt,
@@ -2691,7 +2699,7 @@
 
 		Gozanti_Heavy_Transport_Landing_Craft_Tanks,				Data\ShipNames\Dropship_Tanks.txt,
 		Gozanti_Heavy_Transport_Landing_Craft_Heavy,				Data\ShipNames\Dropship_Heavy.txt,
-
+		
 		Komrk_Landing_Craft_Commando,		Data\ShipNames\Dropship_Mando.txt,
 
 		RZ52_Infantry_Shuttle_Light_Vehicles,		Data\ShipNames\Dropship_Light_Vehicles.txt,
@@ -2863,7 +2871,7 @@
 	<Bombardment_Offset>0 0 600</Bombardment_Offset>
 	<Bombardment_Distribution> 0, 3, 1, 2, 3, 2, 0, 1, 2, 1, 3, 0, 1, 2, 0, 3, 0, 2, 1, 3, 3, 2, 1, 0 </Bombardment_Distribution>
 
-	<Override_Death_Persistence_Duration>900.0</Override_Death_Persistence_Duration> <!-- Stay for 15 minutes -->
+	<Override_Death_Persistence_Duration>1800.0</Override_Death_Persistence_Duration>
 
     <Auto_Resolve_Tactical_Multiplier>1.0</Auto_Resolve_Tactical_Multiplier>
 
@@ -2922,7 +2930,7 @@
 	<Default_Bounty_By_Category_MP>SpaceHero, 250</Default_Bounty_By_Category_MP>
 	<Default_Bounty_By_Category_MP>LandHero, 250</Default_Bounty_By_Category_MP>
 
-	<Corruption_Hyperspace_Bonus> 1.0 </Corruption_Hyperspace_Bonus>
+   <Corruption_Hyperspace_Bonus> 1.0 </Corruption_Hyperspace_Bonus>
 
 	<!-- The following corruption type-related entries need to be listed in the following order:
 		0.	Corruption_Intimidation
