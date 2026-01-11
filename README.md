@@ -8,23 +8,24 @@ For those who love heroes!
 
 - Most heroes respawn on a 10 cycle timer when "killed."
 - This can be disabled mid campaign via the `GameConstants.xml` file.
-- All the default special respawns remain unchanged (Grievous, Trench, Durge).
-- Special structures that generate minor commanders will do so in about half the time from before (fastest is 5 cycles).
-
-### Exceptions to Respawn
-
-- When a CIS mercenary dies, another bounty hunter can be hired instead.
-- **Lucrehulk heroes** Pors Tonith and Mar Tuuk will never respawn because they are too powerful.
+- All the default special respawns remain unchanged (Grievous, Trench, Durge, Dooku, etc.).
+- Special structures that generate minor commanders will do so in about half the time from before (fastest is 5 cycles, slowest is 22).
 
 ### Republic Recruitable Heroes
 
-- Increased the max allowed for each category (more vacant slots to purchase first).
 - When one of these heroes are defeated, their slot is effectively suspended until they respawn.
+- Added option to increase slots for all hero categories by one, which can be used as many times as needed.
+  Check the advanced options tab.
+
+### Exceptions to Respawn
+
+- **All Lucrehulk heroes:** Pors Tonith, Mar Tuuk, Merai Free, The Doctor, Vetlya, and Pirate Pundar.
+- Exceptions can be edited here: `Data/Scripts/Library/RespawnExceptions.lua`
 
 ### One Planet Start
 
 - Heroes spawn at the beginning of FTGU single planet start games, matching the era selected.
-- Enabled Republic command staff. Clones disabled in era 1.
+- Enabled Republic command staff and clones disabled in era 1.
 
 ### How to Edit GameConstants
 
@@ -33,7 +34,7 @@ To disable or edit the time for a respawn:
 1. Go to `Data/XML`
 2. Open `GameConstants.xml`
 3. Find line (418): `<Default_Hero_Respawn_Time>400</Default_Hero_Respawn_Time>`
-  - You can set it to a negative number to deactivate it in between saved games.
+4. You can set it to a negative number to deactivate it in between saved games.
 
 # License
 
